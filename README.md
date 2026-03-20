@@ -1,4 +1,4 @@
-# Janet Portfolio Repo
+# Janet Swisher's Portfolio Repo
 
 A static, Git-friendly portfolio system for position-specific landing pages.
 
@@ -11,7 +11,7 @@ A static, Git-friendly portfolio system for position-specific landing pages.
 - A matching smart table template (separate workbook) to populate the JSON
 
 ## Recommended workflow
-1. Upload Janet's PDFs and images into:
+1. Upload sample PDFs and images into:
    - `assets/pdfs/`
    - `assets/images/`
 2. Fill out the smart table workbook.
