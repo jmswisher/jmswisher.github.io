@@ -1,0 +1,12 @@
+{
+  "employers_json_schema_note": {
+    "featured_project_ids_csv": "Comma-separated list of project_id values from projects.json",
+    "publish": "Y or N",
+    "page_slug": "Used by employer.html?slug=your-slug"
+  },
+  "projects_json_schema_note": {
+    "image_path": "Repo-relative path to an image hosted in the repo",
+    "pdf_path": "Repo-relative path to a PDF hosted in the repo",
+    "skills_csv": "Comma-separated list rendered as tags"
+  }
+}
