@@ -1,0 +1,13 @@
+{
+  "name": "janet-portfolio-generator",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static portfolio site generator for Janet Swisher's portfolio repo.",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "preview": "python3 -m http.server 8000 --directory docs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
