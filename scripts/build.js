@@ -6,6 +6,8 @@ const outDir = path.join(root, 'docs');
 const dataDir = path.join(root, 'data');
 const assetsDir = path.join(root, 'assets');
 
+/* ----------------------------- filesystem helpers ----------------------------- */
+
 function readJSON(relPath) {
   return JSON.parse(fs.readFileSync(path.join(root, relPath), 'utf8'));
 }
@@ -30,11 +32,23 @@ function copyDir(src, dest) {
   }
 }
 
-function toPublishedUrl(value) {
-  if (!value) return "";
-  if (/^(https?:|mailto:|#)/i.test(value)) return value;
-  return "/" + value.replace(/^\/+/, "");
+function writeText(relPath, content) {
+  const absPath = path.join(root, relPath);
+  ensureDir(path.dirname(absPath));
+  fs.writeFileSync(absPath, content, 'utf8');
 }
+
+function assetExists(relPath) {
+  if (!relPath) return false;
+  return fs.existsSync(path.join(root, relPath));
+}
+
+/* --------------------------------- utilities --------------------------------- */
+
+function isPublished(record) {
+  return String(record.publish || 'Y').toUpperCase() !== 'N';
+}
+
 function escapeHtml(value = '') {
   return String(value)
     .replace(/&/g, '&amp;')
@@ -49,13 +63,10 @@ function safeTags(csv) {
   return String(csv).split(',').map(s => s.trim()).filter(Boolean);
 }
 
-function isPublished(record) {
-  return String(record.publish || 'Y').toUpperCase() !== 'N';
-}
-
-function assetExists(relPath) {
-  if (!relPath) return false;
-  return fs.existsSync(path.join(root, relPath));
+function toPublishedUrl(value) {
+  if (!value) return "";
+  if (/^(https?:|mailto:|#)/i.test(value)) return value;
+  return "/" + value.replace(/^\/+/, "");
 }
 
 function publicAssetHref(relPath, depth = 0) {
@@ -63,18 +74,54 @@ function publicAssetHref(relPath, depth = 0) {
   return prefix + relPath.replace(/^\/+/, '');
 }
 
-function externalLink(href) {
-  return /^https?:\/\//i.test(href) || /^mailto:/i.test(href);
+function displayGroupLabel(key) {
+  const labels = {
+    featured: "Featured work",
+    how_tos: "Instructional Content (How-tos)",
+    explanatory: "Explanatory Content",
+    reference: "Reference Content",
+  };
+
+  if (labels[key]) return labels[key];
+
+  return key
+    .replace(/[_-]+/g, " ")
+    .replace(/\b\w/g, c => c.toUpperCase());
 }
 
-function renderButton(href, label, secondary = false) {
-  const attrs = [];
-  attrs.push(`href="${escapeHtml(href)}"`);
-  if (externalLink(href) && !/^mailto:/i.test(href)) {
-    attrs.push('target="_blank" rel="noopener noreferrer"');
+function displayGroupOrder(key) {
+  const order = {
+    featured: 1,
+    how_tos: 2,
+    conceptual: 3,
+    reference: 4,
+  };
+  return order[key] || 999;
+}
+
+function groupItemsByDisplayGroup(items) {
+  const groups = new Map();
+
+  for (const item of items) {
+    const key = (item.selection.display_group || "featured").trim().toLowerCase();
+
+    if (!groups.has(key)) {
+      groups.set(key, []);
+    }
+    groups.get(key).push(item);
   }
-  const className = secondary ? 'button secondary' : 'button';
-  return `<a class="${className}" ${attrs.join(' ')}>${escapeHtml(label)}</a>`;
+
+  return groups;
+}
+
+/* --------------------------------- rendering --------------------------------- */
+
+function renderButton(href, label, secondary = false) {
+  if (!href || !label) return '';
+  const classes = secondary ? 'button secondary' : 'button';
+  const isExternal = /^(https?:|mailto:)/i.test(href);
+  const attrs = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
+  return `<a class="${classes}" href="${escapeHtml(href)}"${attrs}>${escapeHtml(label)}</a>`;
 }
 
 function renderTagRow(tags) {
@@ -82,41 +129,12 @@ function renderTagRow(tags) {
   return `<div class="tag-row">${tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}</div>`;
 }
 
-function renderLinks(object, depth = 0) {
+function renderLinks(object) {
   const links = [];
-  if (assetExists(object.pdf_path)) links.push(renderButton(toPublishedUrl(object.pdf_path, depth), 'PDF', true));
-  if (object.live_url) links.push(renderButton(toPublishedUrl(object.live_url, depth), 'Live page', true));
-  if (object.archive_url) links.push(renderButton(toPublishedUrl(object.archive_url, depth), 'Archived page', true));
+  if (assetExists(object.pdf_path)) links.push(renderButton(toPublishedUrl(object.pdf_path), 'PDF', true));
+  if (object.live_url) links.push(renderButton(toPublishedUrl(object.live_url), 'Live page', true));
+  if (object.archive_url) links.push(renderButton(toPublishedUrl(object.archive_url), 'Archived page', true));
   return links.length ? `<div class="project-links">${links.join('')}</div>` : '';
-}
-
-function renderObjectCard(object, options = {}) {
-  const { depth = 0, customFitNote = '', customLabel = '' } = options;
-  const displayTitle = customLabel || object.title || 'Untitled object';
-  const summary = object.summary ? `<p>${escapeHtml(object.summary)}</p>` : '';
-  const meta = [object.doc_type, object.audience, object.source_position].filter(Boolean).map(escapeHtml).join(' • ');
-  const metaHtml = meta ? `<p class="muted">${meta}</p>` : '';
-  const fitNote = customFitNote || object.position_fit_note || '';
-  const fitNoteHtml = fitNote ? `<p class="muted">${escapeHtml(fitNote)}</p>` : '';
-  const imgUrl = toPublishedUrl(object.image_path);
-  const imgHtml = assetExists(object.image_path)
-    ? `<img class="preview" src="${escapeHtml(publicAssetHref(imgUrl, depth))}" alt="${escapeHtml(object.title || 'Portfolio object preview')}" />`
-    : '';
-
-  return `
-    <article class="project">
-      <div class="media${imgHtml ? '' : ' media-no-image'}">
-        ${imgHtml}
-        <div>
-          <h3>${escapeHtml(displayTitle)}</h3>
-          ${summary}
-          ${metaHtml}
-          ${fitNoteHtml}
-          ${renderTagRow(safeTags(object.skills_csv))}
-          ${renderLinks(object, depth)}
-        </div>
-      </div>
-    </article>`;
 }
 
 function pageShell({ title, bodyClass = '', depth = 0, content }) {
@@ -135,12 +153,49 @@ ${content}
 </html>`;
 }
 
+function renderHomeObjectCard(object) {
+  const imageUrl = assetExists(object.image_path)
+    ? toPublishedUrl(object.image_path)
+    : '';
+
+  return `
+    <article class="card">
+      ${imageUrl ? `<img class="preview" src="${escapeHtml(imageUrl)}" alt="${escapeHtml(object.title || 'Document preview')}" />` : ''}
+      <div class="card-body">
+        <p class="eyebrow">${escapeHtml(object.doc_type || object.object_type || 'Work sample')}</p>
+        <h3>${escapeHtml(object.title || 'Untitled sample')}</h3>
+        ${object.summary ? `<p>${escapeHtml(object.summary)}</p>` : ''}
+        ${renderTagRow(safeTags(object.skills_csv))}
+        ${renderLinks(object)}
+      </div>
+    </article>
+  `;
+}
+
+function renderPositionCard(position) {
+  const title = position.public_label || position.position_title || position.position_name || 'Position page';
+  const href = `positions/${position.page_slug}.html`;
+
+  return `
+    <article class="card">
+      <div class="card-body">
+        <p class="eyebrow">${escapeHtml(position.target_role || 'Role')}</p>
+        <h3>${escapeHtml(title)}</h3>
+        ${position.headline ? `<p>${escapeHtml(position.headline)}</p>` : ''}
+        <div class="project-links">
+          ${renderButton(href, 'Open page')}
+        </div>
+      </div>
+    </article>
+  `;
+}
+
 function renderHomePage(site, positions, objects) {
   const positionCards = positions.map(position => {
     const href = `positions/${encodeURIComponent(position.page_slug)}.html`;
     return `
       <article class="card">
-        <h3>${escapeHtml(position.public_label || position.position_name)}</h3>
+        <h3>${escapeHtml(position.public_label || position.position_title)}</h3>
         <p class="muted">${escapeHtml(position.target_role || '')}</p>
         <p>${escapeHtml(position.headline || '')}</p>
         ${renderButton(href, 'Open page')}
@@ -152,7 +207,7 @@ function renderHomePage(site, positions, objects) {
         <h3>${escapeHtml(object.title || 'Untitled object')}</h3>
         <p>${escapeHtml(object.summary || '')}</p>
         ${renderTagRow(safeTags(object.skills_csv))}
-        ${renderLinks(object, 0)}
+        ${renderLinks(object)}
       </article>`).join('');
 
   return pageShell({
@@ -181,23 +236,84 @@ function renderHomePage(site, positions, objects) {
   });
 }
 
-function renderPositionPage(site, position, objectsForPosition, depth = 1) {
+function renderSelectedObjectCard(item, depth = 0) {
+  const { object, selection } = item;
+
+  const title = selection.custom_label || object.title || '';
+  const fitNote = selection.custom_fit_note || object.position_fit_note || '';
+  const summary = object.summary || '';
+  const meta = [object.doc_type, object.audience].filter(Boolean).join(' • ');
+
+  return `
+    <article class="project">
+      <div class="media">
+        <div>
+          <h3>${escapeHtml(title)}</h3>
+          ${summary ? `<p>${escapeHtml(summary)}</p>` : ''}
+          ${meta ? `<p class="muted">${escapeHtml(meta)}</p>` : ''}
+          ${fitNote ? `<p class="muted">${escapeHtml(fitNote)}</p>` : ''}
+          ${renderTagRow(safeTags(object.skills_csv))}
+          ${renderLinks(object)}
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function renderPositionPage(site, position, selectedItems, depth = 1) {
   const ctas = [];
   const fallbackEmail = site.contact_email ? `mailto:${site.contact_email}` : '';
-  const ctaUrl = position.cta_url && position.cta_url !== 'mailto:janet@example.com' ? position.cta_url : fallbackEmail;
-  if (position.cta_label && ctaUrl) ctas.push(renderButton(ctaUrl, position.cta_label));
-  if (assetExists(position.resume_pdf_path)) ctas.push(renderButton(toPublishedUrl(position.resume_pdf_path, depth), 'Resume PDF', true));
+  const ctaUrl =
+    position.cta_url && position.cta_url !== 'mailto:swisher@alumni.uchicago.edu'
+      ? position.cta_url
+      : fallbackEmail;
 
-  const featuredMarkup = objectsForPosition.length
-    ? objectsForPosition.map(item => renderObjectCard(item.object, {
-        depth,
-        customFitNote: item.selection.custom_fit_note || '',
-        customLabel: item.selection.custom_label || ''
-      })).join('')
-    : '<p class="muted">No featured objects have been selected for this position yet.</p>';
+  if (position.cta_label && ctaUrl) {
+    ctas.push(renderButton(ctaUrl, position.cta_label));
+  }
+
+  if (assetExists(position.resume_pdf_path)) {
+    ctas.push(
+      renderButton(
+        toPublishedUrl(position.resume_pdf_path),
+        'Resume PDF',
+        true
+      )
+    );
+  }
+
+  const groupedItems = groupItemsByDisplayGroup(selectedItems);
+
+  let groupedSectionsHtml = '';
+
+  if (groupedItems.size === 0) {
+    groupedSectionsHtml = `
+      <section class="panel">
+        <h2>Selected work</h2>
+        <p>No objects have been selected for this position yet.</p>
+      </section>
+    `;
+  } else {
+    groupedSectionsHtml = Array.from(groupedItems.entries())
+      .map(([groupKey, items]) => {
+        const cardsHtml = items
+          .map(item => renderSelectedObjectCard(item, depth))
+          .join('');
+
+        return `
+          <section class="panel">
+            <h2>${escapeHtml(displayGroupLabel(groupKey))}</h2>
+            <div class="stack">
+              ${cardsHtml}
+            </div>
+          </section>
+        `;
+      })
+      .join('');
+  }
 
   return pageShell({
-    title: `${position.position_title} | ${site.site_title || "Janet Swisher's Portfolio"}`,
+    title: `${position.position_title || 'Position page'} | ${site.site_title || "Janet Swisher's Portfolio"}`,
     depth,
     content: `
   <header class="site-header">
@@ -212,13 +328,12 @@ function renderPositionPage(site, position, objectsForPosition, depth = 1) {
   </header>
 
   <main class="wrap">
-    <section class="panel">
-      <h2>Featured work</h2>
-      <div class="stack">${featuredMarkup}</div>
-    </section>
+    ${groupedSectionsHtml}
   </main>`
   });
 }
+
+/* ----------------------------------- build ----------------------------------- */
 
 function main() {
   const site = readJSON('data/site.json');
@@ -226,25 +341,28 @@ function main() {
   const objects = readJSON('data/objects.json').filter(isPublished);
   const selections = readJSON('data/selections.json').filter(isPublished);
 
-  const objectMap = new Map(objects.map(object => [object.object_id, object]));
+  const objectMap = new Map(objects.map(obj => [obj.object_id, obj]));
 
   cleanDir(outDir);
   ensureDir(path.join(outDir, 'positions'));
   copyDir(assetsDir, path.join(outDir, 'assets'));
-  copyDir(dataDir, path.join(outDir, 'data'));
   fs.writeFileSync(path.join(outDir, '.nojekyll'), '');
 
   fs.writeFileSync(path.join(outDir, 'index.html'), renderHomePage(site, positions, objects));
 
   for (const position of positions) {
-    const selected = selections
-      .filter(sel => sel.position_id === position.position_id)
-      .sort((a, b) => Number(a.priority_rank || 999) - Number(b.priority_rank || 999))
-      .map(selection => ({ selection, object: objectMap.get(selection.object_id) }))
-      .filter(item => item.object);
+    const selectedItems = selections
+      .filter(sel => sel.position_id === position.position_id && isPublished(sel))
+      .sort((a, b) => (a.priority_rank || 999) - (b.priority_rank || 999))
+      .map(sel => {
+        const object = objectMap.get(sel.object_id);
+        if (!object || !isPublished(object)) return null;
+        return { selection: sel, object };
+     })
+    .filter(Boolean);
 
     const outputPath = path.join(outDir, 'positions', `${position.page_slug}.html`);
-    fs.writeFileSync(outputPath, renderPositionPage(site, position, selected));
+    fs.writeFileSync(outputPath, renderPositionPage(site, position, selectedItems, 1));
   }
 
   console.log(`Built ${positions.length} position page(s) into ${outDir}`);

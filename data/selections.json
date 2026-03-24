@@ -24,7 +24,7 @@
     "position_id": "pos_org_002_documentation_engineer_01",
     "object_id": "obj_002",
     "priority_rank": "1",
-    "display_group": "Instructional Content (How-to Guides)",
+    "display_group": "how_tos",
     "custom_label": "",
     "custom_fit_note": "",
     "publish": "Y"
@@ -34,7 +34,7 @@
     "position_id": "pos_org_002_documentation_engineer_01",
     "object_id": "obj_007",
     "priority_rank": "2",
-    "display_group": "Instructional Content (How-to Guides)",
+    "display_group": "how_tos",
     "custom_label": "",
     "custom_fit_note": "",
     "publish": "Y"
@@ -44,7 +44,7 @@
     "position_id": "pos_org_002_documentation_engineer_01",
     "object_id": "obj_003",
     "priority_rank": "3",
-    "display_group": "Explanatory Content",
+    "display_group": "explanatory",
     "custom_label": "",
     "custom_fit_note": "",
     "publish": "Y"
@@ -54,7 +54,7 @@
     "position_id": "pos_org_002_documentation_engineer_01",
     "object_id": "obj_008",
     "priority_rank": "4",
-    "display_group": "Explanatory Content",
+    "display_group": "explanatory",
     "custom_label": "",
     "custom_fit_note": "I collaborated with a software engineer on this topic; sections I wrote start at \"Embedded content must be labeled.\" This topic was linked from the Firefox Developer Tools Accessibility Inspector; I was conservative about changing headings from those chosen by the engineer, as that would have required code changes to update the linked IDs.",
     "publish": "Y"
@@ -64,7 +64,7 @@
     "position_id": "pos_org_002_documentation_engineer_01",
     "object_id": "obj_011",
     "priority_rank": "5",
-    "display_group": "Reference Content",
+    "display_group": "reference",
     "custom_label": "",
     "custom_fit_note": "",
     "publish": "Y"
@@ -74,7 +74,7 @@
     "position_id": "pos_org_002_documentation_engineer_01",
     "object_id": "obj_014",
     "priority_rank": "6",
-    "display_group": "Reference Content",
+    "display_group": "reference",
     "custom_label": "",
     "custom_fit_note": "",
     "publish": "Y"
