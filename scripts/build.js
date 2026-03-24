@@ -197,14 +197,14 @@ function renderPositionPage(site, position, objectsForPosition, depth = 1) {
     : '<p class="muted">No featured objects have been selected for this position yet.</p>';
 
   return pageShell({
-    title: `${position.position_name} | ${site.site_title || "Janet Swisher's Portfolio"}`,
+    title: `${position.position_title} | ${site.site_title || "Janet Swisher's Portfolio"}`,
     depth,
     content: `
   <header class="site-header">
     <div class="wrap">
       <a class="back-link" href="../index.html">← Back to portfolio hub</a>
       <p class="eyebrow">${escapeHtml(position.target_role || 'Role')}</p>
-      <h1>${escapeHtml(position.position_name || 'Position page')}</h1>
+      <h1>${escapeHtml(position.position_title || 'Position page')}</h1>
       <p class="lede">${escapeHtml(position.headline || '')}</p>
       <p class="summary">${escapeHtml(position.summary || '')}</p>
       ${ctas.length ? `<div class="cta-wrap">${ctas.join('')}</div>` : ''}
