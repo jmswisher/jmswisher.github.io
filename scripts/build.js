@@ -250,7 +250,7 @@ function renderSelectedObjectCard(item, depth = 0) {
         <div>
           <h3>${escapeHtml(title)}</h3>
           ${summary ? `<p>${escapeHtml(summary)}</p>` : ''}
-          ${audience ? `<p class="muted"><strong>Audience:</strong> ${escapeHtml(audience)}</p>` : ''}
+          ${audience ? `<p class="audience"><strong>Audience:</strong> ${escapeHtml(audience)}</p>` : ''}
           ${fitNote ? `<p class="muted">${escapeHtml(fitNote)}</p>` : ''}
           ${renderTagRow(safeTags(object.skills_csv))}
           ${renderLinks(object)}
