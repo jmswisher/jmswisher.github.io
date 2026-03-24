@@ -2,7 +2,7 @@
 
 A static-site, Git-friendly portfolio system for position-specific landing pages.
 
-## Why do make this site this way?
+## Why make this site this way?
 This site is overkill for a writing portfolio site. I could have whipped up some HTML and CSS for a static site quickly and been done with it.
 This site represents a way of thinking about documentation and metadata, especially in the AI age. This site is not intended for use by RAG systems, but it contains the type of metadata that a RAG system might make use of.
 
