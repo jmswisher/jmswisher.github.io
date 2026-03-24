@@ -242,7 +242,7 @@ function renderSelectedObjectCard(item, depth = 0) {
   const title = selection.custom_label || object.title || '';
   const fitNote = selection.custom_fit_note || object.position_fit_note || '';
   const summary = object.summary || '';
-  const meta = [object.doc_type, object.audience].filter(Boolean).join(' • ');
+  const audience = [object.audience].filter(Boolean).join(' • ');
 
   return `
     <article class="project">
@@ -250,7 +250,7 @@ function renderSelectedObjectCard(item, depth = 0) {
         <div>
           <h3>${escapeHtml(title)}</h3>
           ${summary ? `<p>${escapeHtml(summary)}</p>` : ''}
-          ${meta ? `<p class="muted">${escapeHtml(meta)}</p>` : ''}
+          ${audience ? `<p class="muted"><strong>Audience:</strong> ${escapeHtml(audience)}</p>` : ''}
           ${fitNote ? `<p class="muted">${escapeHtml(fitNote)}</p>` : ''}
           ${renderTagRow(safeTags(object.skills_csv))}
           ${renderLinks(object)}
