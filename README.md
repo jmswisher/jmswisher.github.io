@@ -1,46 +1,39 @@
 # Janet Swisher's Portfolio Repo
 
-A static, Git-friendly portfolio system for position-specific landing pages.
+A static-site, Git-friendly portfolio system for position-specific landing pages.
 
-## What this site includes
+## Why make this site this way?
+This site is overkill for a writing portfolio site. I could have whipped up some HTML and CSS for a static site quickly and been done with it.
+This site represents a way of thinking about documentation and metadata, especially in the AI age. This site is not intended for use by RAG systems, but it contains the type of metadata that a RAG system might make use of.
+
+## What this repo contains
 - `index.html` hub page
-- `position.html` reusable position page template
-- Shared CSS and JS
-- JSON data files for site config, positions, and projects
-- Empty asset folders for PDFs and images
-- A matching smart table template (separate workbook) to populate the JSON
+- Position-specific portfolio pages in `positions/`
+- Shared CSS
+- JSON data files for site config, positions, documents, document "objects", and selections of doc objects per position. (Document objects are "lenses" on documents: the same document can be viewed and described in multiple ways.)
+- Build script that generates the hub pages and portfolio pages based on the JSON files
 
-## Recommended workflow
-1. Upload sample PDFs and images into:
-   - `assets/pdfs/`
-   - `assets/images/`
-2. Fill out the smart table workbook.
-3. Copy/export the rows into:
-   - `data/positions.json`
-   - `data/projects.json`
-4. Publish with GitHub Pages.
+## Workflows
+To add a new sample:
+1. Add PDFs or images in the assets/ folder.
+2. Update `documents.json` and `objects.json` with metadata about the samples.
+3. For positions where this sample is appropriate, update `selections.json`.
+4. Run `build.js` to regenerate the site.
+
+To add a new position:
+1. Update `organizations.json` if this is for a new organization. Company names are not used; I keep that mapping privately elsewhere.
+2. Update `positions.json` with info about the position.
+3. Update `selections.json` with document objects that are appropriate portfolio items for the position.
+4. Run `build.js` to regenerate the site.
 
 ## File conventions
 - Use lowercase, hyphenated filenames.
 - Prefer WebP/PNG for images.
 - Keep PDFs reasonably small when possible.
 
-## Key data files
-- `data/site.json`: global site metadata
-- `data/positions.json`: position-specific page settings
-- `data/projects.json`: reusable work samples / case studies
+## To-dos
+- Convert build.js into a GitHub Action. Currently, I run it locally and check in the updated output files into `docs`.
+- Create tools/checks to ensure consistency among JSON files.
 
-## How the renderer works
-`assets/js/app.js` reads the JSON files and:
-- populates the homepage with position cards
-- renders one position-specific page based on the `?slug=` URL parameter
-
-Example:
-- `index.html`
-- `position.html?slug=acme-data-analyst`
-
-## Notes
-- This is a static-site site. No backend or database is required.
-- Asset references should use repo-relative paths, e.g.:
-  - `assets/images/dashboard.png`
-  - `assets/pdfs/case-study-sales-dashboard.pdf`
+## Future work
+- Enable "smart" selection of portfolio items.
