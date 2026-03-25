@@ -78,5 +78,55 @@
     "custom_label": "",
     "custom_fit_note": "",
     "publish": "Y"
+  },
+  {
+    "selection_id": "sel_pos_org_003_technical_writer_01_01",
+    "position_id": "pos_org_003_technical_writer_01",
+    "object_id": "obj_012",
+    "priority_rank": "1",
+    "display_group": "concept",
+    "custom_label": "",
+    "custom_fit_note": "",
+    "publish": "Y"
+  },
+  {
+    "selection_id": "sel_pos_org_003_technical_writer_01_02",
+    "position_id": "pos_org_003_technical_writer_01",
+    "object_id": "obj_007",
+    "priority_rank": "2",
+    "display_group": "security-guide",
+    "custom_label": "",
+    "custom_fit_note": "",
+    "publish": "Y"
+  },
+  {
+    "selection_id": "sel_pos_org_003_technical_writer_01_03",
+    "position_id": "pos_org_003_technical_writer_01",
+    "object_id": "obj_016",
+    "priority_rank": "3",
+    "display_group": "admin-guide",
+    "custom_label": "",
+    "custom_fit_note": "",
+    "publish": "Y"
+  },
+  {
+    "selection_id": "sel_pos_org_003_technical_writer_01_04",
+    "position_id": "pos_org_003_technical_writer_01",
+    "object_id": "obj_001",
+    "priority_rank": "4",
+    "display_group": "task",
+    "custom_label": "",
+    "custom_fit_note": "",
+    "publish": "Y"
+  },
+  {
+    "selection_id": "sel_pos_org_003_technical_writer_01_05",
+    "position_id": "pos_org_003_technical_writer_01",
+    "object_id": "obj_004",
+    "priority_rank": "5",
+    "display_group": "security-guide",
+    "custom_label": "",
+    "custom_fit_note": "",
+    "publish": "Y"
   }
 ]

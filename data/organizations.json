@@ -8,5 +8,10 @@
     "organization_id": "org_002",
     "organization_code": "ORG002",
     "notes": "Internal tracking record only"
-  }  
+  },
+  {
+    "organization_id": "org_003",
+    "organization_code": "ORG003",
+    "notes": "Internal tracking record only"
+  }      
 ]
