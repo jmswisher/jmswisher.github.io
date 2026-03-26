@@ -6,6 +6,8 @@ A static-site, Git-friendly portfolio system for position-specific landing pages
 This site is overkill for a writing portfolio site. I could have whipped up some HTML and CSS for a static site quickly and been done with it.
 This site represents a way of thinking about documentation and metadata, especially in the AI age. This site is not intended for use by RAG systems, but it contains the type of metadata that a RAG system might make use of.
 
+The current implementation keeps data for the system in a set of JSON files, which represents a very crude flat-file database and does not scale at all. However, it is sufficient for my immediate need of managing a fairly small number of items.
+
 ## What this repo contains
 - `index.html` hub page
 - Position-specific portfolio pages in `positions/`
@@ -16,7 +18,7 @@ This site represents a way of thinking about documentation and metadata, especia
 ## Workflows
 To add a new sample:
 1. Add PDFs or images in the assets/ folder.
-2. Update `documents.json` and `objects.json` with metadata about the samples.
+2. Update `documents.json` and `objects.json` with data about the sample.
 3. For positions where this sample is appropriate, update `selections.json`.
 4. Run `build.js` to regenerate the site.
 
@@ -34,6 +36,7 @@ To add a new position:
 ## To-dos
 - Convert build.js into a GitHub Action. Currently, I run it locally and check in the updated output files into `docs`.
 - Create tools/checks to ensure consistency among JSON files.
+- Replace JSON with a "real" lightweight database.
 
 ## Future work
 - Enable "smart" selection of portfolio items.
