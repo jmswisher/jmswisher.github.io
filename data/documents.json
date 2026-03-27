@@ -8,7 +8,7 @@
     "archive_url": "https://web.archive.org/web/20250523233150/https://resources.here.io/docs/core/develop/debug/",
     "pdf_path": "assets/pdfs/jswisher-log-uploader-tool.pdf",
     "preview_image_path": "",
-    "public_ok": "Y",
+    "public_ok": true,
     "status": "ready",
     "notes": ""
   },
@@ -21,7 +21,7 @@
     "archive_url": "https://web.archive.org/web/20200913121501/https://developer.mozilla.org/en-US/docs/Web/Security/Subdomain_takeovers",
     "pdf_path": "assets/pdfs/jswisher-subdomain-takeovers.pdf",
     "preview_image_path": "",
-    "public_ok": "Y",
+    "public_ok": true,
     "status": "ready",
     "notes": ""
   },
@@ -34,7 +34,7 @@
     "archive_url": "https://web.archive.org/web/20251208135339/https://resources.here.io/docs/core/develop/security/api-security/",
     "pdf_path": "assets/pdfs/jswisher-api-security.pdf",
     "preview_image_path": "",
-    "public_ok": "Y",
+    "public_ok": true,
     "status": "ready",
     "notes": ""
   },
@@ -47,7 +47,7 @@
     "archive_url": "https://web.archive.org/web/20200702135212/https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names",
     "pdf_path": "assets/pdfs/jswisher-text-labels-and-names.pdf",
     "preview_image_path": "",
-    "public_ok": "Y",
+    "public_ok": true,
     "status": "ready",
     "notes": ""
   },
@@ -60,7 +60,7 @@
     "archive_url": "https://web.archive.org/web/20250523233150/https://resources.here.io/docs/core/develop/manifests/",
     "pdf_path": "assets/pdfs/jswisher-manitest-settings.pdf",
     "preview_image_path": "",
-    "public_ok": "Y",
+    "public_ok": true,
     "status": "ready",
     "notes": ""
   },
