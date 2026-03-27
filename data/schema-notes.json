@@ -7,6 +7,6 @@
   },
   "selections": {
     "position_id": "Must match an existing position_id",
-    "object_id": "Must match an existing object_id"
+    "sample_id": "Must match an existing sample_id"
   }
 }

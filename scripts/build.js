@@ -129,11 +129,11 @@ function renderTagRow(tags) {
   return `<div class="tag-row">${tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}</div>`;
 }
 
-function renderLinks(object) {
+function renderLinks(sample) {
   const links = [];
-  if (assetExists(object.pdf_path)) links.push(renderButton(toPublishedUrl(object.pdf_path), 'PDF', true));
-  if (object.live_url) links.push(renderButton(toPublishedUrl(object.live_url), 'Live page', true));
-  if (object.archive_url) links.push(renderButton(toPublishedUrl(object.archive_url), 'Archived page', true));
+  if (assetExists(sample.pdf_path)) links.push(renderButton(toPublishedUrl(sample.pdf_path), 'PDF', true));
+  if (sample.live_url) links.push(renderButton(toPublishedUrl(sample.live_url), 'Live page', true));
+  if (sample.archive_url) links.push(renderButton(toPublishedUrl(sample.archive_url), 'Archived page', true));
   return links.length ? `<div class="project-links">${links.join('')}</div>` : '';
 }
 
@@ -153,20 +153,20 @@ ${content}
 </html>`;
 }
 
-function renderHomeObjectCard(object) {
-  const imageUrl = assetExists(object.image_path)
-    ? toPublishedUrl(object.image_path)
+function renderHomeSampleCard(sample) {
+  const imageUrl = assetExists(sample.image_path)
+    ? toPublishedUrl(sample.image_path)
     : '';
 
   return `
     <article class="card">
-      ${imageUrl ? `<img class="preview" src="${escapeHtml(imageUrl)}" alt="${escapeHtml(object.title || 'Document preview')}" />` : ''}
+      ${imageUrl ? `<img class="preview" src="${escapeHtml(imageUrl)}" alt="${escapeHtml(sample.title || 'Document preview')}" />` : ''}
       <div class="card-body">
-        <p class="eyebrow">${escapeHtml(object.doc_type || object.object_type || 'Work sample')}</p>
-        <h3>${escapeHtml(object.title || 'Untitled sample')}</h3>
-        ${object.summary ? `<p>${escapeHtml(object.summary)}</p>` : ''}
-        ${renderTagRow(safeTags(object.skills_csv))}
-        ${renderLinks(object)}
+        <p class="eyebrow">${escapeHtml(sample.doc_type || sample.sample_type || 'Work sample')}</p>
+        <h3>${escapeHtml(sample.title || 'Untitled sample')}</h3>
+        ${sample.summary ? `<p>${escapeHtml(sample.summary)}</p>` : ''}
+        ${renderTagRow(safeTags(sample.skills_csv))}
+        ${renderLinks(sample)}
       </div>
     </article>
   `;
@@ -190,7 +190,7 @@ function renderPositionCard(position) {
   `;
 }
 
-function renderHomePage(site, positions, objects) {
+function renderHomePage(site, positions, samples) {
   const positionCards = positions.map(position => {
     const href = `positions/${encodeURIComponent(position.page_slug)}.html`;
     return `
@@ -202,12 +202,12 @@ function renderHomePage(site, positions, objects) {
       </article>`;
   }).join('');
 
-  const projectCards = objects.map(object => `
+  const projectCards = samples.map(sample => `
       <article class="card">
-        <h3>${escapeHtml(object.title || 'Untitled object')}</h3>
-        <p>${escapeHtml(object.summary || '')}</p>
-        ${renderTagRow(safeTags(object.skills_csv))}
-        ${renderLinks(object)}
+        <h3>${escapeHtml(sample.title || 'Untitled sample')}</h3>
+        <p>${escapeHtml(sample.summary || '')}</p>
+        ${renderTagRow(safeTags(sample.skills_csv))}
+        ${renderLinks(sample)}
       </article>`).join('');
 
   return pageShell({
@@ -236,13 +236,13 @@ function renderHomePage(site, positions, objects) {
   });
 }
 
-function renderSelectedObjectCard(item, depth = 0) {
-  const { object, selection } = item;
+function renderSelectedSampleCard(item, depth = 0) {
+  const { sample, selection } = item;
 
-  const title = selection.custom_label || object.title || '';
-  const fitNote = selection.custom_fit_note || object.position_fit_note || '';
-  const summary = object.summary || '';
-  const audience = [object.audience].filter(Boolean).join(' • ');
+  const title = selection.custom_label || sample.title || '';
+  const fitNote = selection.custom_fit_note || sample.position_fit_note || '';
+  const summary = sample.summary || '';
+  const audience = [sample.audience].filter(Boolean).join(' • ');
 
   return `
     <article class="project">
@@ -252,8 +252,8 @@ function renderSelectedObjectCard(item, depth = 0) {
           ${summary ? `<p>${escapeHtml(summary)}</p>` : ''}
           ${audience ? `<p class="audience"><strong>Audience:</strong> ${escapeHtml(audience)}</p>` : ''}
           ${fitNote ? `<p class="muted">${escapeHtml(fitNote)}</p>` : ''}
-          ${renderTagRow(safeTags(object.skills_csv))}
-          ${renderLinks(object)}
+          ${renderTagRow(safeTags(sample.skills_csv))}
+          ${renderLinks(sample)}
         </div>
       </div>
     </article>
@@ -290,14 +290,14 @@ function renderPositionPage(site, position, selectedItems, depth = 1) {
     groupedSectionsHtml = `
       <section class="panel">
         <h2>Selected work</h2>
-        <p>No objects have been selected for this position yet.</p>
+        <p>No samples have been selected for this position yet.</p>
       </section>
     `;
   } else {
     groupedSectionsHtml = Array.from(groupedItems.entries())
       .map(([groupKey, items]) => {
         const cardsHtml = items
-          .map(item => renderSelectedObjectCard(item, depth))
+          .map(item => renderSelectedSampleCard(item, depth))
           .join('');
 
         return `
@@ -338,26 +338,26 @@ function renderPositionPage(site, position, selectedItems, depth = 1) {
 function main() {
   const site = readJSON('data/site.json');
   const positions = readJSON('data/positions.json').filter(isPublished);
-  const objects = readJSON('data/objects.json').filter(isPublished);
+  const samples = readJSON('data/samples.json').filter(isPublished);
   const selections = readJSON('data/selections.json').filter(isPublished);
 
-  const objectMap = new Map(objects.map(obj => [obj.object_id, obj]));
+  const sampleMap = new Map(samples.map(obj => [obj.sample_id, obj]));
 
   cleanDir(outDir);
   ensureDir(path.join(outDir, 'positions'));
   copyDir(assetsDir, path.join(outDir, 'assets'));
   fs.writeFileSync(path.join(outDir, '.nojekyll'), '');
 
-  fs.writeFileSync(path.join(outDir, 'index.html'), renderHomePage(site, positions, objects));
+  fs.writeFileSync(path.join(outDir, 'index.html'), renderHomePage(site, positions, samples));
 
   for (const position of positions) {
     const selectedItems = selections
       .filter(sel => sel.position_id === position.position_id && isPublished(sel))
       .sort((a, b) => (a.priority_rank || 999) - (b.priority_rank || 999))
       .map(sel => {
-        const object = objectMap.get(sel.object_id);
-        if (!object || !isPublished(object)) return null;
-        return { selection: sel, object };
+        const sample = sampleMap.get(sel.sample_id);
+        if (!sample || !isPublished(sample)) return null;
+        return { selection: sel, sample };
      })
     .filter(Boolean);
 
