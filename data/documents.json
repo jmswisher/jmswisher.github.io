@@ -2,7 +2,7 @@
   {
     "document_id": "doc_001",
     "title": "Log Uploader tool",
-    "source_employer": "HERE",
+    "source_employer": "org_005",
     "source_role": "Head of Documentation",
     "doc_url": "https://resources.here.io/docs/core/develop/debug/log-uploader",
     "archive_url": "https://web.archive.org/web/20250523233150/https://resources.here.io/docs/core/develop/debug/",
@@ -15,7 +15,7 @@
   {
     "document_id": "doc_002",
     "title": "Subdomain takeovers",
-    "source_employer": "Mozilla",
+    "source_employer": "org_004",
     "source_role": "Staff Technical Writer",
     "doc_url": "",
     "archive_url": "https://web.archive.org/web/20200913121501/https://developer.mozilla.org/en-US/docs/Web/Security/Subdomain_takeovers",
@@ -28,7 +28,7 @@
   {
     "document_id": "doc_003",
     "title": "API security",
-    "source_employer": "HERE",
+    "source_employer": "org_005",
     "source_role": "Head of Documentation",
     "doc_url": "https://resources.here.io/docs/core/develop/debug/api-security",
     "archive_url": "https://web.archive.org/web/20251208135339/https://resources.here.io/docs/core/develop/security/api-security/",
@@ -41,7 +41,7 @@
   {
     "document_id": "doc_004",
     "title": "Text labels and names",
-    "source_employer": "Mozilla",
+    "source_employer": "org_004",
     "source_role": "Staff Technical Writer",
     "doc_url": "",
     "archive_url": "https://web.archive.org/web/20200702135212/https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names",
@@ -54,7 +54,7 @@
   {
     "document_id": "doc_005",
     "title": "Application manifest",
-    "source_employer": "HERE",
+    "source_employer": "org_005",
     "source_role": "Head of Documentation",
     "doc_url": "https://resources.here.io/docs/core/develop/manifests/",
     "archive_url": "https://web.archive.org/web/20250523233150/https://resources.here.io/docs/core/develop/manifests/",
@@ -67,7 +67,7 @@
   {
     "document_id": "doc_006",
     "title": "Fallback manifests",
-    "source_employer": "HERE",
+    "source_employer": "org_005",
     "source_role": "Head of Documentation",
     "doc_url": "https://resources.here.io/docs/core/develop/manifests/fallback-manifests",
     "archive_url": "https://web.archive.org/web/20250523233150/https://resources.here.io/docs/core/develop/manifests/fallback-manifests",
@@ -80,7 +80,7 @@
   {
     "document_id": "doc_007",
     "title": "API security for desktop owners",
-    "source_employer": "HERE",
+    "source_employer": "org_005",
     "source_role": "Head of Documentation",
     "doc_url": "https://resources.here.io/docs/core/manage/security/api-security-desktop-owners",
     "archive_url": "https://web.archive.org/web/20250907141340/https://resources.here.io/docs/core/manage/security/api-security-desktop-owners/",
