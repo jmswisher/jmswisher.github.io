@@ -36,15 +36,15 @@ organization
   └── has many documents
 
 position
-  └── belongs to organization
+  └── belongs to 1 organization
   └── has many selections
 
 document
-  └── belongs to organization
+  └── belongs to 1 organization
   └── has many samples
 
 sample
-  └── belongs to document
+  └── belongs to 1 document
   └── can appear in many selections
 
 selection

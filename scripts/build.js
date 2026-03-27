@@ -165,7 +165,7 @@ function renderHomeSampleCard(sample) {
         <p class="eyebrow">${escapeHtml(sample.doc_type || sample.sample_type || 'Work sample')}</p>
         <h3>${escapeHtml(sample.title || 'Untitled sample')}</h3>
         ${sample.summary ? `<p>${escapeHtml(sample.summary)}</p>` : ''}
-        ${renderTagRow(safeTags(sample.skills_csv))}
+        ${renderTagRow(sample.skills)}
         ${renderLinks(sample)}
       </div>
     </article>
@@ -206,7 +206,7 @@ function renderHomePage(site, positions, samples) {
       <article class="card">
         <h3>${escapeHtml(sample.title || 'Untitled sample')}</h3>
         <p>${escapeHtml(sample.summary || '')}</p>
-        ${renderTagRow(safeTags(sample.skills_csv))}
+        ${renderTagRow(sample.skills)}
         ${renderLinks(sample)}
       </article>`).join('');
 
@@ -252,7 +252,7 @@ function renderSelectedSampleCard(item, depth = 0) {
           ${summary ? `<p>${escapeHtml(summary)}</p>` : ''}
           ${audience ? `<p class="audience"><strong>Audience:</strong> ${escapeHtml(audience)}</p>` : ''}
           ${fitNote ? `<p class="muted">${escapeHtml(fitNote)}</p>` : ''}
-          ${renderTagRow(safeTags(sample.skills_csv))}
+          ${renderTagRow(sample.skills)}
           ${renderLinks(sample)}
         </div>
       </div>
