@@ -162,7 +162,7 @@ function renderHomeSampleCard(sample) {
     <article class="card">
       ${imageUrl ? `<img class="preview" src="${escapeHtml(imageUrl)}" alt="${escapeHtml(sample.title || 'Document preview')}" />` : ''}
       <div class="card-body">
-        <p class="eyebrow">${escapeHtml(sample.doc_type || sample.sample_type || 'Work sample')}</p>
+        <p class="eyebrow">${escapeHtml(sample.sample_type || 'Work sample')}</p>
         <h3>${escapeHtml(sample.title || 'Untitled sample')}</h3>
         ${sample.summary ? `<p>${escapeHtml(sample.summary)}</p>` : ''}
         ${renderTagRow(sample.skills)}
