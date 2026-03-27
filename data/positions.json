@@ -8,12 +8,14 @@
     "public_label": "Documentation Engineer Portfolio",
     "headline": "Ships docs, tests products, writes codes examples, improves IA, all using AI tools.",
     "summary": "Selected samples highlight developer-facing docs of various types.",
-    "priority_doc_types_csv": "developer guide, concept, security guide, troubleshooting",
-    "priority_skills_csv": "API documentation, Information architecture, Developer experience",
+    "priority_doc_types": ["developer guide", "concept", "security guide", "troubleshooting"],
+    "priority_skills": ["API documentation", "Information architecture", "Developer experience"],
     "resume_pdf_path": "assets/pdfs/janet-swisher-resume-doc-engr-01.pdf",
-    "cta_label": "Contact Janet",
-    "cta_url": "mailto:swisher@alumni.uchicago.edu",
-    "publish": "Y"
+    "cta": {
+      "label": "Contact Janet",
+      "url": "mailto:swisher@alumni.uchicago.edu"
+    },
+    "publish": "true"
   },
     {
     "position_id": "pos_org_003_technical_writer_01",
@@ -24,11 +26,13 @@
     "public_label": "Technical Writer Portfolio",
     "headline": "Collaborates cross-functionally to produce product manuals, CLI guides, release notes, and training materials.",
     "summary": "These samples demonstrate documentation for complex developer platforms, including configuration, runtime behavior, security, and troubleshooting.",
-    "priority_doc_types_csv": "concept, architecture, reference, security-guide, admin-guide, task",
-    "priority_skills_csv": "procedures, concepts, workflow, reference, security, troubleshooting",
+    "priority_doc_types": ["concept", "architecture", "reference", "security-guide", "admin-guide", "task"],
+    "priority_skills": ["procedures", "concepts", "workflow", "reference", "security", "troubleshooting"],
     "resume_pdf_path": "assets/pdfs/Janet-Swisher-Resume-Tech-Writer-01.pdf",
-    "cta_label": "Contact Janet",
-    "cta_url": "mailto:swisher@alumni.uchicago.edu",
-    "publish": "Y"
+    "cta": {
+      "label": "Contact Janet",
+      "url": "mailto:swisher@alumni.uchicago.edu"
+    },
+    "publish": "true"
   }
 ]

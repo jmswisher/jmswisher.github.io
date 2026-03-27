@@ -46,7 +46,7 @@ function assetExists(relPath) {
 /* --------------------------------- utilities --------------------------------- */
 
 function isPublished(record) {
-  return String(record.publish || 'Y').toUpperCase() !== 'N';
+  return String(record.publish || true) !== false;
 }
 
 function escapeHtml(value = '') {
@@ -264,12 +264,12 @@ function renderPositionPage(site, position, selectedItems, depth = 1) {
   const ctas = [];
   const fallbackEmail = site.contact_email ? `mailto:${site.contact_email}` : '';
   const ctaUrl =
-    position.cta_url && position.cta_url !== 'mailto:swisher@alumni.uchicago.edu'
-      ? position.cta_url
+    position.cta.url && position.cta.url !== 'mailto:swisher@alumni.uchicago.edu'
+      ? position.cta.url
       : fallbackEmail;
 
-  if (position.cta_label && ctaUrl) {
-    ctas.push(renderButton(ctaUrl, position.cta_label));
+  if (position.cta.label && ctaUrl) {
+    ctas.push(renderButton(ctaUrl, position.cta.label));
   }
 
   if (assetExists(position.resume_pdf_path)) {
