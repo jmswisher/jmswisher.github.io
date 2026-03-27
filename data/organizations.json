@@ -2,16 +2,35 @@
   {
     "organization_id": "org_001",
     "organization_code": "ORG001",
+    "org_type": "hiring_org",
     "notes": "Internal tracking record only"
   },
   {
     "organization_id": "org_002",
     "organization_code": "ORG002",
+    "org_type": "hiring_org",
     "notes": "Internal tracking record only"
   },
   {
     "organization_id": "org_003",
+    "name": "Private 01",
     "organization_code": "ORG003",
+    "org_type": "hiring_org",
     "notes": "Internal tracking record only"
-  }      
+  },
+  {
+    "organization_id": "org_004",
+    "name": "Mozilla",
+    "organization_code": "ORG004",
+    "org_type": "employer",
+    "notes": ""
+  },
+{
+    "organization_id": "org_005",
+    "name": "HERE.io",
+    "short_name": "HERE",
+    "organization_code": "ORG005",
+    "org_type": "employer",
+    "notes": ""
+}
 ]
