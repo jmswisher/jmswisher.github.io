@@ -3,130 +3,130 @@
     "selection_id": "sel_pos_org_001_senior_technical_writer_01_01",
     "position_id": "pos_org_001_senior_technical_writer_01",
     "sample_id": "smp_001",
-    "priority_rank": "1",
+    "priority_rank": 1,
     "display_group": "featured",
     "custom_label": "",
     "custom_fit_note": "",
-    "publish": "Y"
+    "publish": true
   },
   {
     "selection_id": "sel_pos_org_001_senior_technical_writer_01_02",
     "position_id": "pos_org_001_senior_technical_writer_01",
     "sample_id": "smp_003",
-    "priority_rank": "2",
+    "priority_rank": 2,
     "display_group": "featured",
     "custom_label": "",
     "custom_fit_note": "",
-    "publish": "Y"
+    "publish": true
   },
   {
     "selection_id": "sel_pos_org_002_documentation_engineer_01_01",
     "position_id": "pos_org_002_documentation_engineer_01",
     "sample_id": "smp_002",
-    "priority_rank": "1",
+    "priority_rank": 1,
     "display_group": "how_tos",
     "custom_label": "",
     "custom_fit_note": "",
-    "publish": "Y"
+    "publish": true
   },
   {
     "selection_id": "sel_pos_org_002_documentation_engineer_01_02",
     "position_id": "pos_org_002_documentation_engineer_01",
     "sample_id": "smp_007",
-    "priority_rank": "2",
+    "priority_rank": 2,
     "display_group": "how_tos",
     "custom_label": "",
     "custom_fit_note": "",
-    "publish": "Y"
+    "publish": true
   },
   {
     "selection_id": "sel_pos_org_002_documentation_engineer_01_03",
     "position_id": "pos_org_002_documentation_engineer_01",
     "sample_id": "smp_003",
-    "priority_rank": "3",
+    "priority_rank": 3,
     "display_group": "explanatory",
     "custom_label": "",
     "custom_fit_note": "",
-    "publish": "Y"
+    "publish": true
   },
   {
     "selection_id": "sel_pos_org_002_documentation_engineer_01_04",
     "position_id": "pos_org_002_documentation_engineer_01",
     "sample_id": "smp_008",
-    "priority_rank": "4",
+    "priority_rank": 4,
     "display_group": "explanatory",
     "custom_label": "",
     "custom_fit_note": "I collaborated with a software engineer on this topic; sections I wrote start at \"Embedded content must be labeled.\" This topic was linked from the Firefox Developer Tools Accessibility Inspector; I was conservative about changing headings from those chosen by the engineer, as that would have required code changes to update the linked IDs.",
-    "publish": "Y"
+    "publish": true
   },
   {
     "selection_id": "sel_pos_org_002_documentation_engineer_01_05",
     "position_id": "pos_org_002_documentation_engineer_01",
     "sample_id": "smp_011",
-    "priority_rank": "5",
+    "priority_rank": 5,
     "display_group": "reference",
     "custom_label": "",
     "custom_fit_note": "",
-    "publish": "Y"
+    "publish": true
   },
   {
     "selection_id": "sel_pos_org_002_documentation_engineer_01_05",
     "position_id": "pos_org_002_documentation_engineer_01",
     "sample_id": "smp_014",
-    "priority_rank": "6",
+    "priority_rank": 6,
     "display_group": "reference",
     "custom_label": "",
     "custom_fit_note": "",
-    "publish": "Y"
+    "publish": true
   },
   {
     "selection_id": "sel_pos_org_003_technical_writer_01_01",
     "position_id": "pos_org_003_technical_writer_01",
     "sample_id": "smp_012",
-    "priority_rank": "1",
+    "priority_rank": 1,
     "display_group": "concept",
     "custom_label": "",
     "custom_fit_note": "",
-    "publish": "Y"
+    "publish": true
   },
   {
     "selection_id": "sel_pos_org_003_technical_writer_01_02",
     "position_id": "pos_org_003_technical_writer_01",
     "sample_id": "smp_007",
-    "priority_rank": "2",
+    "priority_rank": 2,
     "display_group": "security-guide",
     "custom_label": "",
     "custom_fit_note": "",
-    "publish": "Y"
+    "publish": true
   },
   {
     "selection_id": "sel_pos_org_003_technical_writer_01_03",
     "position_id": "pos_org_003_technical_writer_01",
     "sample_id": "smp_016",
-    "priority_rank": "3",
+    "priority_rank": 3,
     "display_group": "admin-guide",
     "custom_label": "",
     "custom_fit_note": "",
-    "publish": "Y"
+    "publish": true
   },
   {
     "selection_id": "sel_pos_org_003_technical_writer_01_04",
     "position_id": "pos_org_003_technical_writer_01",
     "sample_id": "smp_001",
-    "priority_rank": "4",
+    "priority_rank": 4,
     "display_group": "task",
     "custom_label": "",
     "custom_fit_note": "",
-    "publish": "Y"
+    "publish": true
   },
   {
     "selection_id": "sel_pos_org_003_technical_writer_01_05",
     "position_id": "pos_org_003_technical_writer_01",
     "sample_id": "smp_004",
-    "priority_rank": "5",
+    "priority_rank": 5,
     "display_group": "security-guide",
     "custom_label": "",
     "custom_fit_note": "",
-    "publish": "Y"
+    "publish": true
   }
 ]
