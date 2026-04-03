@@ -9,11 +9,10 @@ This site represents a way of thinking about documentation and metadata, especia
 The current implementation keeps data for the system in a set of JSON files, which represents a very crude flat-file database and does not scale at all. However, it is sufficient for my immediate need of managing a fairly small number of items.
 
 ## What this repo contains
-- `index.html` hub page
-- Position-specific portfolio pages in `positions/`
-- Shared CSS
-- JSON data files for site config, positions, documents, document "objects", and selections of doc objects per position. (Document objects are "lenses" on documents: the same document can be viewed and described in multiple ways.)
-- Build script that generates the hub pages and portfolio pages based on the JSON files
+- `assets/`: PDFs of portfolio items, shared CSS, folder for future thumbnail images
+- `data/`:JSON data files for site config, positions, documents, document "samples", and selections of doc objects per position. (A sample is a "lens" on a document: the same document can be viewed and described in multiple ways, as different samples.)
+- `docs/`: Output directory for generated static files for https://jmswisher.github.io/
+- `scripts/build.js`: Build script that generates the hub page and portfolio pages based on the JSON files
 
 ## Workflows
 To add a new sample:
