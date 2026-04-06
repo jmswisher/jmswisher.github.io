@@ -105,7 +105,7 @@
         "org_type",
         "notes"
     ],
-    "status": "documentary"
+    "status": "canonical"
   },
   {
     "filename": "data/projects.json",
@@ -123,20 +123,6 @@
         "demo_url",
         "employer_fit_note"
     ],
-    "status": "future-use"
-  },
-  {
-    "filename": "data/schema-notes.json",
-    "required_fields": [],
-    "optional_fields": [
-        "positions",
-        "selections", 
-        "site",
-        "samples",
-        "documents",
-        "organizations",
-        "projects"
-    ],
-    "status": "documentary"
+    "status": "canonical"
   }
 ]
