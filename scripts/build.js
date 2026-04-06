@@ -153,43 +153,6 @@ ${content}
 </html>`;
 }
 
-function renderHomeSampleCard(sample) {
-  const imageUrl = assetExists(sample.image_path)
-    ? toPublishedUrl(sample.image_path)
-    : '';
-
-  return `
-    <article class="card">
-      ${imageUrl ? `<img class="preview" src="${escapeHtml(imageUrl)}" alt="${escapeHtml(sample.title || 'Document preview')}" />` : ''}
-      <div class="card-body">
-        <p class="eyebrow">${escapeHtml(sample.sample_type || 'Work sample')}</p>
-        <h3>${escapeHtml(sample.title || 'Untitled sample')}</h3>
-        ${sample.summary ? `<p>${escapeHtml(sample.summary)}</p>` : ''}
-        ${renderTagRow(sample.skills)}
-        ${renderLinks(sample)}
-      </div>
-    </article>
-  `;
-}
-
-function renderPositionCard(position) {
-  const title = position.public_label || position.position_title || position.position_name || 'Position page';
-  const href = `positions/${position.page_slug}.html`;
-
-  return `
-    <article class="card">
-      <div class="card-body">
-        <p class="eyebrow">${escapeHtml(position.target_role || 'Role')}</p>
-        <h3>${escapeHtml(title)}</h3>
-        ${position.headline ? `<p>${escapeHtml(position.headline)}</p>` : ''}
-        <div class="project-links">
-          ${renderButton(href, 'Open page')}
-        </div>
-      </div>
-    </article>
-  `;
-}
-
 function renderHomePage(site, positions, samples) {
   const positionCards = positions.map(position => {
     const href = `positions/${encodeURIComponent(position.page_slug)}.html`;
