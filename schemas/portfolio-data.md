@@ -4,75 +4,6 @@ See `ontology.md` for high-level descriptions of the entities represented by the
 
 ## Entity definitions
 
-### site
-A singleton config object for the portfolio site.
-
-File: `/data/site.json`
-
-Cardinality: Exactly one
-
-Required fields:
-
-- `site_id`: string
-- `site_title`: string
-- `owner_name`: string
-
-Optional fields:
-
-- `site_tagline`: string
-- `contact_email`: string
-- `base_url`: string
-- `default_cta_label`: string
-- `default_cta_url`: string
-
-### organization
-
-An employer, client, hiring organization or other corporate entity associate with positions, projectss or documents.
-
-File: `/data/organizations.json`
-
-Required fields:
-
-- `organization_id`: string, `org_` + unique digits
-- `name`: string
-
-Optional fields:
-
-- `short_name`: string
-- `type`: string: "employer", "hiring_org", or "client"
-- `industry`: string
-- `notes`: string
-
-### position
-
-A target portfolio page or target role. A position is not necessarily identical to a historical job title. It might represent a tailored portfolio view for a prospective role.
-
-File: `data/positions.json`
-
-Required fields:
-
-- `position_id`: string, `pos_` + unique digits
-- `position_title`: string
-- `page_slug`: string
-- `public_label`: string
-- `publish`: Boolean
-
-Optional fields:
-
-- `organization_id`: string
-- `headline`: string
-- `summary`: string
-- `position_sequence`: number
-- `priority_sample_types`: array of strings
-- `priority_skills`: array of strings
-- `resume_pdf_path`: string
-- `cta` : object
-
-`cta` object fields:
-
-- `label`: string
-- `url`: string
-
 ### document
 
 The canonical record for a source artifact. A document represents the real underlying piece of work, such as a documentation topic or article. It can be accessed in multiple ways, such as a PDF file, web page, or archived web page.
@@ -83,30 +14,93 @@ File: `data/documents.json`
 
 Required fields:
 
-- `document_id`: string
-- `title`: string
-- `organization_id`: string
-- `public_ok`: Boolean
-- `status`: string
+* `document_id`: string, unique identifier for the document
+* `title`: string, original title of the document
+* `public_ok`: Boolean, whether this document can be shared publicly
 
 Optional fields:
 
-- `source_employer`: string (organization.organization_id)
-- `source_role`: string
-- `doc_url`: string
-- `archive_url`: string
-- `pdf_path`: string
-- `preview_image_path`: string
-- `notes`: string
+* `source_employer`: string, `organization.org_id` of the employer this document was written for 
+* `source_role`: string, title of the role in which this document was written
+* `doc_url`: string, URL of the live version of the document
+* `archive_url`: string, URL of an archived version of the document
+* `pdf_path`: string, local path to a PDF version of the document
+* `preview_image_path`: string, local path to a preview image of the document
+this document was written for
+* `notes`: string, any notes about this document (not exposed on portfolio site)
+* `status`: string, stage of development of the document, allowed values: "draft", "ready" (default), "archived"
 
-Allow `status` values:
+### organization
 
-- "draft"
-- "ready"
-- "archived"
+An employer, client, hiring organization or other corporate entity associate with positions, projects or documents.
 
-`organization_id` is the canonical organization link.
-`source_organization_name` may be retained for convenience or migration compatibility, but the normalized relationship is `document.organization_id` -> `organization.organization_id`.
+File: `/data/organizations.json`
+
+Required fields:
+
+* `organization_id`: string, unique identifier for the organization; `org_` + unique digits
+
+Optional fields:
+
+* `name`: string, name of the company, which may be a placeholder for prospective employers, for privacy reasons
+* `short_name`: string, a shortened version of the name
+* `org_type`: string, one of: "employer", "hiring_org", "client", or "other
+* `notes`: string, any notes about the organization
+
+### position
+
+A target portfolio page or target role. A position is not necessarily identical to a historical job title. It might represent a tailored portfolio view for a prospective role.
+
+File: `data/positions.json`
+
+Required fields:
+
+* `position_id`: string, unique identifier for a position, `pos_` + unique digits
+* `page_slug`: string, base of the name of the HTML file for the position page
+* `publish`: Boolean, whether this position can be published on the site
+
+Optional fields:
+
+* `headline`: string, brief description of a position
+* `organization_id`: string, must match the ID of an existing organization
+* `position_title`: string, title of the position and page
+* `position_sequence`: number, relative order of this position; not used
+* `priority_sample_types`: array of strings, content types to that should be selected for this position
+* `priority_skills`: array of strings, professional skills that selected samples should demonstrate
+* `public_label`: string, title of the position on the home page
+* `resume_pdf_path`: string, local path to a PDF of a resume for this position
+* `summary`: string, description of the samples on the page and what they demonstrate
+* `target_role`: string, term above the title of the position page, defaults to "Role"
+*`cta` : object, representing a call to action, with the following fields
+
+  * `label`: string, label for the action button
+  * `url`: string, URL for the action
+
+### project
+
+A standalone portfolio project or case study.
+
+Projects are a separate content family from document-derived writing samples. They should not be forced into the `document` / `sample` model unless future requirements clearly justify that convergence.
+
+This object type is not currently used, but is intended for future enhancement of the portfolio site.
+
+File: `/data/projects.json`
+
+Required fields:
+
+* `project_id`: string, unique identifier for the project
+* `title` : string, title of the project
+
+Optional fields:
+
+* `one_liner`: string, brief description of the project
+* `skills`: array of strings, skills used in the project
+* `image_path`: string, local path to an image for the project
+* `image_alt`: string, alt text for the project image
+* `pdf_path`: string, local path to a PDF related to the project
+* `github_url`: string, URL of a GitHub repo for the project
+* `demo_url`: string, URL of a demo of the project
+* `employer_fit_note`: string, description of what types of employers might be interested in this project
 
 ### sample
 
@@ -122,48 +116,49 @@ File: `/data/samples.json`
 
 Required fields:
 
-- `sample_id` : string
-- `document_id` : string
-- `title` : string
-- `sample_type` : string
-- `summary` : string
-- `publish` : Boolean
+* `sample_id`: string, unique identifier for the sample
+* `document_id`: string, document this sample represents; one document can have many samples, but each sample has only one document
+* `publish`: Boolean, whether the sample can be published
 
 Optional fields:
 
-- `content_skill` : string
-- `asset_type` : string
-- `audience` : string
-- `skills` : array of strings
-- `topics` : array of strings
-- `industries` : array of strings
-- `fit_note` : string
-- `pdf_path` : string
-- `image_path` : string
-- `live_url` : string
-- `archive_url` : string
+* `archive_url`: string, URL of an archived version of the sample
+* `asset_type`: string, how the sample was originally published: "web page", "PDF", "other"
+* `audience`: string, type of audience
+* `content-skill`: tag for the primary type of content-creation skill this sample represents
+* `image_path`: string, path to a thumbnail image
+* `industries`: array of strings, industries where this sample is applicable
+* `live_url`: string, URL of a live version of the sample
+* `pdf_path`: string, local path to a PDF of the sample
+* `position_fit_note`: string, explanation of why this sample is illustrative for this position
+* `sample_type`: string, content type of the sample
+* `skills`: array of strings, general skills that this sample demonstrates
+* `source_employer`: string, `organization.org_id` of the employer for whom this was done
+* `summary`: string, description of the sample
+* `title`: string, title of the sample (might not be the same as the document title)
+* `topics`: array of strings, topics covered by the sample
 
 Examples of `sample_type` values:
 
-- `concept`
-- `reference`
-- `developer-guide`
-- `security-guide`
-- `troubleshooting`
-- `workflow`
-- `admin-guide`
-- `architecture`
-- `release-note`
-- `tutorial`
+* `concept`
+* `reference`
+* `developer-guide`
+* `security-guide`
+* `troubleshooting`
+* `workflow`
+* `admin-guide`
+* `architecture`
+* `release-note`
+* `tutorial`
 
 Examples of `content_skill` values:
 
-- `procedural-instructions`
-- `conceptual-explanation`
-- `risk-analysis`
-- `best-practices-guidance`
-- `workflow-explanation`
-- `reference-structuring`
+* `procedural-instructions`
+* `conceptual-explanation`
+* `risk-analysis`
+* `best-practices-guidance`
+* `workflow-explanation`
+* `reference-structuring`
 
 ### selection
 
@@ -175,48 +170,38 @@ File: `/data/selections.json`
 
 Required fields:
 
-- `selection_id` : string
-- `position_id` : string
-- `sample_id` : string
-- `priority_rank` : number
-- `publish` : Boolean
+* `selection_id`: string, unique identifier for the selection
+* `position_id`: string, unique ID of an existing position
+* `sample_id`: string, unique ID of an existing sample selected for the position
+* `priority_rank` : priority of this selection among those for a given position
+* `publish` : Boolean, whether this selection can be published
 
 Optional fields:
 
-- `display_group` : string
-- `custom_label` : string
-- `custom_fit_note` : string
+* `display_group` : string, name of a group of similar selections for display purposes
+* `custom_label`: string, a label that supersedes the sample title
+* `custom_fit_note`: string, supersedes the sample's position fit note
 
 Cardinality: A sample may appear in many selections.
 A position may contain many selections.
 
-### project
+### site
 
-A standalone portfolio project or case study.
+A singleton config object for the portfolio site.
 
-Projects are a separate content family from document-derived writing samples. They should not be forced into the `document` / `sample` model unless future requirements clearly justify that convergence.
+File: `/data/site.json`
 
-File: `/data/projects.json`
+Cardinality: Exactly one
 
 Required fields:
 
-- `project_id` : string
-- `title` : string
+* `site_title`: string, title for the site, used as a title for the home page
 
 Optional fields:
 
-- `one_liner` : string
-- `summary` : string
-- `skills` : array of strings
-- `topics` : array of strings
-- `industries` : array of strings
-- `image_path` : string
-- `image_alt` : string
-- `pdf_path` : string
-- `github_url` : string
-- `demo_url` : string
-- `employer_fit_note` : string
-- `publish` : Boolean
+* `site_tagline`: string, lede on the home page
+* `owner_name`: string, owner of the site, for identification
+* `contact_email`: string, fallback email address used when `cta.url` is not defined
 
 ## Relationship rules
 
@@ -264,23 +249,23 @@ selection.sample_id -> sample.sample_id
 
 ### Required referential integrity
 
-- Every `document.organization_id` must exist in `organizations.json`.
-- Every `sample.document_id` must exist in `documents.json`.
-- Every `selection.position_id` must exist in positions.json.
-- Every `selection.sample_id` must exist in `samples.json`.
+* Every `document.organization_id` must exist in `organizations.json`.
+* Every `sample.document_id` must exist in `documents.json`.
+* Every `selection.position_id` must exist in positions.json.
+* Every `selection.sample_id` must exist in `samples.json`.
 
 ### Uniqueness
 
 The following must be unique within their collections:
 
-- `site.site_id`
-- `organization.organization_id`
-- `position.position_id`
-- `position.page_slug`
-- `document.document_id`
-- `sample.sample_id`
-- `selection.selection_id`
-- `project.project_id`
+* `site.site_id`
+* `organization.organization_id`
+* `position.position_id`
+* `position.page_slug`
+* `document.document_id`
+* `sample.sample_id`
+* `selection.selection_id`
+* `project.project_id`
 
 ## Selection rank rule
 
@@ -292,10 +277,10 @@ For each `position_id`, `priority_rank` values should be unique.
 
 ## Publish behavior
 
-- Records with `publish: false` must not be rendered on public pages.
-- A selection must not render if either the referenced sample or the selection itself has `publish: false`.
-- A sample must not render if the referenced document has `public_ok: false`.
-- A document with `status: archived` may still be referenced historically, but rendering behavior should be explicit in the build logic.
+* Records with `publish: false` must not be rendered on public pages.
+* A selection must not render if either the referenced sample or the selection itself has `publish: false`.
+* A sample must not render if the referenced document has `public_ok: false`.
+* A document with `status: archived` may still be referenced historically, but rendering behavior should be explicit in the build logic.
 
 ## Build expectations
 

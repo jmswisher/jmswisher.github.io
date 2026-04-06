@@ -1,0 +1,142 @@
+[
+  {
+    "filename": "data/site.json",
+    "required_fields": [
+        "site_title"
+    ],
+    "optional_fields": [
+        "site_tagline",
+        "owner_name",
+        "contact_email"
+    ],
+    "status": "canonical"
+  },
+  {
+    "filename": "data/positions.json",
+    "required_fields": [
+        "position_id",
+        "page_slug",
+        "publish"
+    ],
+    "optional_fields": [
+        "cta",
+        "headline",
+        "organization_id",
+        "position_title",
+        "position_sequence",
+        "priority_sequence",
+        "priority_sample_types",
+        "public_label",
+        "resume_pdf_path",
+        "summary",
+        "target_role"
+    ],
+    "status": "canonical"
+  },
+  {
+    "filename": "data/samples.json",
+    "required_fields": [
+        "sample_id",
+        "document_id",
+        "publish"
+    ],
+    "optional_fields": [
+        "archive_url",
+        "asset_type",
+        "audience",
+        "content-skill",
+        "image_path",
+        "industries",
+        "live_url",
+        "pdf_path",
+        "position_fit_note",
+        "sample_type",
+        "skills",
+        "source_employer",
+        "summary",
+        "title",
+        "topics"
+    ],
+    "status": "canonical"
+  },
+  {
+    "filename": "data/documents.json",
+    "required_fields": [
+        "document_id",
+        "public_ok",
+        "status",
+        "title"
+        ],
+    "optional_fields": [
+        "archive_url",
+        "description",
+        "doc_url",
+        "notes",
+        "pdf_path",
+        "preview_image_path",
+        "source_employer"
+    ],
+    "status": "canonical"
+  },
+  {
+    "filename": "data/selections.json",
+    "required_fields": [
+        "selection_id",
+        "position_id",
+        "sample_id", 
+        "priority_rank",
+        "publish"
+    ],
+    "optional_fields": [
+        "custom_label",
+        "custom_fit_note",
+        "display_group"
+    ],
+    "status": "canonical"
+  },
+  {
+    "filename": "data/organizations.json",
+    "required_fields": [
+        "organization_id"
+    ],
+    "optional_fields": [
+        "name",
+        "short_name",
+        "org_type",
+        "notes"
+    ],
+    "status": "documentary"
+  },
+  {
+    "filename": "data/projects.json",
+    "required_fields": [
+        "project_id",
+        "title"
+    ],
+    "optional_fields": [
+        "one_liner",
+        "skills",
+        "image_path",
+        "image_alt",
+        "pdf_path",
+        "github_url",
+        "demo_url",
+        "employer_fit_note"
+    ],
+    "status": "future-use"
+  },
+  {
+    "filename": "data/schema-notes.json",
+    "required_fields": [],
+    "optional_fields": [
+        "positions",
+        "selections", 
+        "site",
+        "samples",
+        "documents",
+        "organizations",
+        "projects"
+    ],
+    "status": "documentary"
+  }
+]
