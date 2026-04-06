@@ -66,7 +66,7 @@ File: `data/documents.json`
 
 Required fields:
 
-* `document_id`: string, unique identifier for the document, `doc_` + digits
+* `document_id`: string, unique identifier for the document: `doc_` + unique digits
 * `title`: string, original title of the document
 * `public_ok`: Boolean, whether this document can be shared publicly
 
@@ -107,22 +107,22 @@ File: `data/positions.json`
 
 Required fields:
 
-* `position_id`: string, unique identifier for a position, `pos_` + unique string
+* `position_id`: string, unique identifier for a position: `pos_` +  `organization_id` + `position.page_slug`
 * `page_slug`: string, base of the name of the HTML file for the position page
 * `publish`: Boolean, whether this position can be published on the site
 
 Optional fields:
 
-* `headline`: string, brief description of a position
-* `organization_id`: string, must match the ID of an existing organization
 * `position_title`: string, title of the position and page
+* `public_label`: string, title of the position on the home page
+* `organization_id`: string, must match the ID of an existing organization
+* `headline`: string, brief description of a position
+* `summary`: string, description of the samples on the page and what they demonstrate
 * `position_sequence`: number, relative order of this position; not used
 * `priority_sample_types`: array of strings, content types to that should be selected for this position
 * `priority_skills`: array of strings, professional skills that selected samples should demonstrate
-* `public_label`: string, title of the position on the home page
-* `resume_pdf_path`: string, local path to a PDF of a resume for this position
-* `summary`: string, description of the samples on the page and what they demonstrate
 * `target_role`: string, term above the title of the position page, defaults to "Role"
+* `resume_pdf_path`: string, local path to a PDF of a resume for this position
 *`cta` : object, representing a call to action, with the following fields
 
   * `label`: string, label for the action button
@@ -140,7 +140,7 @@ File: `/data/projects.json`
 
 Required fields:
 
-* `project_id`: string, unique identifier for the project
+* `project_id`: string, unique identifier for the project: `proj_` + brief descriptive string
 * `title` : string, title of the project
 
 Optional fields:
@@ -168,27 +168,27 @@ File: `/data/samples.json`
 
 Required fields:
 
-* `sample_id`: string, unique identifier for the sample
+* `sample_id`: string, unique identifier for the sample, `smp_` + unique digits
 * `document_id`: string, document this sample represents; must match a `document_id` in `documents.json`
 * `publish`: Boolean, whether the sample can be published
 
 Optional fields:
 
-* `archive_url`: string, URL of an archived version of the sample
+* `title`: string, title of the sample (might not be the same as the document title)
+* `source_employer`: string, `organization.org_id` of the employer * `archive_url`: string, URL of an archived version of the sample
 * `asset_type`: string, how the sample was originally published: "web page", "PDF", "other"
 * `audience`: string, type of audience
-* `content-skill`: tag for the primary type of content-creation skill this sample represents
+* `content_skill`: tag for the primary type of content-creation skill this sample represents
+* `position_fit_note`: string, explanation of why this sample is illustrative for this position
+* `sample_type`: string, content type of the sample
+* `skills`: array of strings, general skills that this sample demonstrates
+for whom this was done
+* `summary`: string, description of the sample
+* `topics`: array of strings, topics covered by the sample
 * `image_path`: string, path to a thumbnail image
 * `industries`: array of strings, industries where this sample is applicable
 * `live_url`: string, URL of a live version of the sample
 * `pdf_path`: string, local path to a PDF of the sample
-* `position_fit_note`: string, explanation of why this sample is illustrative for this position
-* `sample_type`: string, content type of the sample
-* `skills`: array of strings, general skills that this sample demonstrates
-* `source_employer`: string, `organization.org_id` of the employer for whom this was done
-* `summary`: string, description of the sample
-* `title`: string, title of the sample (might not be the same as the document title)
-* `topics`: array of strings, topics covered by the sample
 
 Examples of `sample_type` values:
 
@@ -222,7 +222,7 @@ File: `/data/selections.json`
 
 Required fields:
 
-* `selection_id`: string, unique identifier for the selection
+* `selection_id`: string, unique identifier for the selection, typically `sel_pos_` + `organization_id` + `position.page_slug`
 * `position_id`: string, unique ID of an existing position
 * `sample_id`: string, unique ID of an existing sample selected for the position
 * `priority_rank` : priority of this selection among those for a given position
@@ -325,6 +325,12 @@ Within a single position, `priority_rank` values should be unique unless the dis
 Recommended rule:
 
 For each `position_id`, `priority_rank` values should be unique.
+
+## ID stability rules
+
+* IDs are permanent once published in source data.
+* IDs must not be repurposed
+* An ID of a deleted item should not be reused for a new item.
 
 ## Publish behavior
 
