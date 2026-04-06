@@ -56,6 +56,9 @@ project
 
 ## Entity definitions
 
+The following subsections provide information about each entity.
+Note that the order in which the fields are listed is the preferred order for them when adding or modifying records in the corresponding files.
+
 ### document
 
 The canonical record for a source artifact. A document represents the real underlying piece of work, such as a documentation topic or article. It can be accessed in multiple ways, such as a PDF file, web page, or archived web page.
@@ -74,12 +77,12 @@ Optional fields:
 
 * `source_employer`: string, `organization.org_id` of the employer this document was written for
 * `source_role`: string, title of the role in which this document was written
+* `notes`: string, any notes about this document (not exposed on portfolio site)
 * `doc_url`: string, URL of the live version of the document
 * `archive_url`: string, URL of an archived version of the document
 * `pdf_path`: string, local path to a PDF version of the document
 * `preview_image_path`: string, local path to a preview image of the document
 this document was written for
-* `notes`: string, any notes about this document (not exposed on portfolio site)
 * `status`: string, stage of development of the document, allowed values: "draft", "ready" (default), "archived"
 
 ### organization
@@ -147,12 +150,12 @@ Optional fields:
 
 * `one_liner`: string, brief description of the project
 * `skills`: array of strings, skills used in the project
+* `employer_fit_note`: string, description of what types of employers might be interested in this project
 * `image_path`: string, local path to an image for the project
 * `image_alt`: string, alt text for the project image
 * `pdf_path`: string, local path to a PDF related to the project
 * `github_url`: string, URL of a GitHub repo for the project
 * `demo_url`: string, URL of a demo of the project
-* `employer_fit_note`: string, description of what types of employers might be interested in this project
 
 ### sample
 
@@ -175,8 +178,7 @@ Required fields:
 Optional fields:
 
 * `title`: string, title of the sample (might not be the same as the document title)
-* `source_employer`: string, `organization.org_id` of the employer * `archive_url`: string, URL of an archived version of the sample
-* `asset_type`: string, how the sample was originally published: "web page", "PDF", "other"
+* `source_employer`: string, `organization.org_id` of the employer * * `asset_type`: string, how the sample was originally published: "web page", "PDF", "other"
 * `audience`: string, type of audience
 * `content_skill`: tag for the primary type of content-creation skill this sample represents
 * `position_fit_note`: string, explanation of why this sample is illustrative for this position
@@ -185,8 +187,9 @@ Optional fields:
 for whom this was done
 * `summary`: string, description of the sample
 * `topics`: array of strings, topics covered by the sample
-* `image_path`: string, path to a thumbnail image
 * `industries`: array of strings, industries where this sample is applicable
+`archive_url`: string, URL of an archived version of the sample
+* `image_path`: string, path to a thumbnail image
 * `live_url`: string, URL of a live version of the sample
 * `pdf_path`: string, local path to a PDF of the sample
 

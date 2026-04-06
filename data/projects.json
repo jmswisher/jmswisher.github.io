@@ -4,35 +4,35 @@
     "title": "Sales Dashboard Optimization",
     "one_liner": "Rebuilt KPI reporting to reduce decision lag and make weekly reviews faster.",
     "skills": ["SQL", "Tableau", "Stakeholder Communication"],
+    "employer_fit_note": "Useful for employers that value analytics, reporting, and operational clarity.",
     "image_path": "assets/images/sales-dashboard.png",
     "image_alt": "Preview image for the sales dashboard project",
     "pdf_path": "assets/pdfs/case-study-sales-dashboard.pdf",
     "github_url": "https://github.com/username/example-sales-dashboard",
-    "demo_url": "",
-    "employer_fit_note": "Useful for employers that value analytics, reporting, and operational clarity."
+    "demo_url": ""
   },
   {
     "project_id": "proj_ops_automation",
     "title": "Workflow Automation Playbook",
     "one_liner": "Documented and automated a repeatable intake-to-delivery process for internal teams.",
     "skills": ["Process Design", "Documentation", "Automation"],
+    "employer_fit_note": "Useful for employers hiring into PMO, operations, enablement, or systems roles.",
     "image_path": "assets/images/ops-automation.png",
     "image_alt": "Preview image for the workflow automation project",
     "pdf_path": "assets/pdfs/case-study-ops-automation.pdf",
     "github_url": "https://github.com/username/example-ops-automation",
-    "demo_url": "",
-    "employer_fit_note": "Useful for employers hiring into PMO, operations, enablement, or systems roles."
+    "demo_url": ""
   },
   {
     "project_id": "proj_user_research",
     "title": "User Research Synthesis",
     "one_liner": "Converted interview notes into prioritized product and process recommendations.",
     "skills": ["Research", "Synthesis", "Prioritization"],
+    "employer_fit_note": "Useful for employers that want evidence of structured thinking and customer empathy.",
     "image_path": "assets/images/user-research.png",
     "image_alt": "Preview image for the user research project",
     "pdf_path": "assets/pdfs/case-study-user-research.pdf",
     "github_url": "",
-    "demo_url": "",
-    "employer_fit_note": "Useful for employers that want evidence of structured thinking and customer empathy."
+    "demo_url": ""
   }
 ]

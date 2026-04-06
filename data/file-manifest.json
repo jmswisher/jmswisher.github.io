@@ -19,17 +19,17 @@
         "publish"
     ],
     "optional_fields": [
-        "cta",
-        "headline",
-        "organization_id",
         "position_title",
-        "position_sequence",
-        "priority_sequence",
-        "priority_sample_types",
         "public_label",
-        "resume_pdf_path",
+        "organization_id",
+        "headline",
         "summary",
-        "target_role"
+        "position_sequence",
+        "priority_sample_types",
+        "priority_skills",
+        "target_role",
+        "resume_pdf_path",
+        "cta"
     ],
     "status": "canonical"
   },
@@ -41,21 +41,21 @@
         "publish"
     ],
     "optional_fields": [
-        "archive_url",
+        "title",
+        "source_employer",
         "asset_type",
         "audience",
-        "content-skill",
-        "image_path",
-        "industries",
-        "live_url",
-        "pdf_path",
+        "content_skill",
         "position_fit_note",
         "sample_type",
         "skills",
-        "source_employer",
         "summary",
-        "title",
-        "topics"
+        "topics",
+        "industries",
+        "archive_url",
+        "image_path",
+        "live_url",
+        "pdf_path"
     ],
     "status": "canonical"
   },
@@ -63,9 +63,9 @@
     "filename": "data/documents.json",
     "required_fields": [
         "document_id",
+        "title",
         "public_ok",
-        "status",
-        "title"
+        "status"
         ],
     "optional_fields": [
         "archive_url",

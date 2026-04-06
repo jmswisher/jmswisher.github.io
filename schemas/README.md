@@ -14,5 +14,6 @@ The following files are canonical:
 * `data/projects.json`
 
 The file `data/file-manifest.json` provides information about the files in the `data` folder.
+The order of the fields in entity records is the preferred order of fields in the corresponding JSON files.
 
 The `editing-rules.md` file provides suggestions for maintaining data hygiene when editing the JSON files.

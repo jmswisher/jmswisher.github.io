@@ -1,38 +1,38 @@
 [
   {
     "position_id": "pos_org_002_documentation_engineer_01",
-    "organization_id": "org_002",
-    "position_title": "Documentation Engineer",
-    "position_sequence": 3,
     "page_slug": "documentation-engineer-01",
+    "publish": "true",
+    "position_title": "Documentation Engineer",
     "public_label": "Documentation Engineer Portfolio",
+    "organization_id": "org_002",
     "headline": "Ships docs, tests products, writes codes examples, improves IA, all using AI tools.",
     "summary": "Selected samples highlight developer-facing docs of various types.",
+    "position_sequence": 3,
     "priority_sample_types": ["developer guide", "concept", "security guide", "troubleshooting"],
     "priority_skills": ["API documentation", "Information architecture", "Developer experience"],
     "resume_pdf_path": "assets/pdfs/janet-swisher-resume-doc-engr-01.pdf",
     "cta": {
       "label": "Contact Janet",
       "url": "mailto:swisher@alumni.uchicago.edu"
-    },
-    "publish": "true"
+    }
   },
     {
     "position_id": "pos_org_003_technical_writer_01",
-    "organization_id": "org_003",
-    "position_title": "Technical Writer",
-    "position_sequence": "3",
     "page_slug": "technical-writer-01",
+    "publish": "true",
+    "position_title": "Technical Writer",
     "public_label": "Technical Writer Portfolio",
+    "organization_id": "org_003",
     "headline": "Collaborates cross-functionally to produce product manuals, CLI guides, release notes, and training materials.",
     "summary": "These samples demonstrate documentation for complex developer platforms, including configuration, runtime behavior, security, and troubleshooting.",
+    "position_sequence": "3",
     "priority_sample_types": ["concept", "architecture", "reference", "security-guide", "admin-guide", "task"],
     "priority_skills": ["procedures", "concepts", "workflow", "reference", "security", "troubleshooting"],
     "resume_pdf_path": "assets/pdfs/Janet-Swisher-Resume-Tech-Writer-01.pdf",
     "cta": {
       "label": "Contact Janet",
       "url": "mailto:swisher@alumni.uchicago.edu"
-    },
-    "publish": "true"
+    }
   }
 ]
