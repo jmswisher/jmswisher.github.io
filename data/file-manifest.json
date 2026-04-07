@@ -64,17 +64,17 @@
     "required_fields": [
         "document_id",
         "title",
-        "public_ok",
-        "status"
-        ],
+        "public_ok"
+    ],
     "optional_fields": [
-        "archive_url",
-        "description",
-        "doc_url",
+        "source_employer",
+        "source_role",
         "notes",
+        "doc_url",
+        "archive_url",
         "pdf_path",
         "preview_image_path",
-        "source_employer"
+        "status"
     ],
     "status": "canonical"
   },
@@ -88,9 +88,9 @@
         "publish"
     ],
     "optional_fields": [
+        "display_group",
         "custom_label",
-        "custom_fit_note",
-        "display_group"
+        "custom_fit_note"
     ],
     "status": "canonical"
   },
@@ -116,12 +116,12 @@
     "optional_fields": [
         "one_liner",
         "skills",
+        "employer_fit_note",
         "image_path",
         "image_alt",
         "pdf_path",
         "github_url",
-        "demo_url",
-        "employer_fit_note"
+        "demo_url"
     ],
     "status": "canonical"
   }
