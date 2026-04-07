@@ -29,5 +29,11 @@
     "short_name": "HERE",
     "org_type": "employer",
     "notes": ""
+},
+{
+    "organization_id": "org_006",
+    "name": "Private 06",
+    "org_type": "hiring_org",
+    "notes": "Internal tracking record only"
 }
 ]
