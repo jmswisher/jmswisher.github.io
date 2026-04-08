@@ -3,7 +3,7 @@
     "sample_id": "smp_001",
     "document_id": "doc_001",
     "publish": true,
-    "title": "Troubleshooting: How to use the Log Uploader tool",
+    "title": "Collect diagnostic logs for troubleshooting",
     "source_employer": "org_005",
     "asset_type": "web page",
     "audience": "developers",
@@ -493,5 +493,35 @@
     "image_path": "",
     "live_url": "https://resources.here.io/docs/core/manage/security/api-security-desktop-owners",
     "pdf_path": "assets/pdfs/jswisher-api-security-desktop.pdf"
-  }
+  },
+  {
+  "sample_id": "smp_017",
+  "document_id": "doc_008",
+  "title": "Agents: integrating external systems with HERE Enterprise Browser",
+  "sample_types": ["concept", "platform-architecture"],
+  "content_mode": "conceptual-explanation",
+  "asset_type": "web_page",
+  "audience": ["platform administrators", "enterprise architects"],
+  "summary": "Explains how agents connect HERE Enterprise Browser to external systems such as Microsoft 365, Salesforce, and Slack, enabling cross-application search and interoperability.",
+  "skills": ["Platform documentation", "Conceptual documentation", "Enterprise software documentation"],
+  "topics": ["system integrations", "enterprise SaaS platforms", "browser-based productivity tools"],
+  "industries": ["enterprise software", "financial services"],
+  "fit_note": "Demonstrates ability to explain platform integration architecture and third-party connectivity concepts.",
+  "publish": true
+},
+{
+  "sample_id": "smp_018",
+  "document_id": "doc_008",
+  "title": "Configure an agent integration in the HERE Admin Console",
+  "sample_types": ["admin-guide", "task"],
+  "content_mode": "task-guidance",
+  "asset_type": "web_page",
+  "audience": ["platform administrators"],
+  "summary": "Step-by-step instructions for creating and configuring an 'agent' (integration) in the HERE Admin Console, including selecting the agent type, entering configuration values, and granting access.",
+  "skills": ["Administrative documentation", "Task-oriented writing", "Enterprise software documentation"],
+  "topics": ["platform administration", "agent configuration", "enterprise integrations"],
+  "industries": ["enterprise software", "fintech"],
+  "fit_note": "Shows clear step-by-step administrative task documentation for configuring enterprise integrations.",
+  "publish": true
+}
 ]

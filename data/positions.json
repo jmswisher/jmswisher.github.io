@@ -17,6 +17,25 @@
         "url": "mailto:swisher@alumni.uchicago.edu"
         }
     },
+    {
+    "position_id": "pos_org_007_sr_tech_writer_01",
+    "page_slug": "sr_tech-writer-01",
+    "publish": true,
+    "position_title": "Senior Technical Writer",
+    "public_label": "Senior Technical Writer Portfolio",
+    "organization_id": "org_007",
+    "headline": "Creates a wide range of documentation for technical and non-technical audiences.",
+    "summary": "These samples show how I document complex software platforms by organizing guidance around real configuration, operational, and troubleshooting workflows so users can successfully use the system.",
+    "position_sequence": 2,
+    "priority_sample_types": ["developer guide", "user guide", "release notes", "troubleshooting", "API guide", "reference", "configuration guide", "tutorial"],
+    "priority_skills": ["procedures", "concepts", "workflow", "reference", "API documentation", "Information architecture"],
+    "resume_pdf": "assets/pdfs/Janet-Swisher-Resume-Sr-Tech-Writer-01.pdf",
+    "cta": {
+        "label": "Contact Janet",
+        "url": "mailto:swisher@alumni.uchicago.edu"
+        }
+
+    },
   {
     "position_id": "pos_org_002_documentation_engineer_01",
     "page_slug": "documentation-engineer-01",
@@ -44,7 +63,7 @@
     "organization_id": "org_003",
     "headline": "Collaborates cross-functionally to produce product manuals, CLI guides, release notes, and training materials.",
     "summary": "These samples demonstrate documentation for complex developer platforms, including configuration, runtime behavior, security, and troubleshooting.",
-    "position_sequence": "2",
+    "position_sequence": 4,
     "priority_sample_types": ["concept", "architecture", "reference", "security-guide", "admin-guide", "task"],
     "priority_skills": ["procedures", "concepts", "workflow", "reference", "security", "troubleshooting"],
     "resume_pdf_path": "assets/pdfs/Janet-Swisher-Resume-Tech-Writer-01.pdf",

@@ -80,7 +80,7 @@
   {
     "document_id": "doc_007",
     "title": "API security for desktop owners",
-    "public_ok": "",
+    "public_ok": true,
     "source_employer": "org_005",
     "source_role": "Head of Documentation",
     "notes": "",
@@ -88,6 +88,19 @@
     "archive_url": "https://web.archive.org/web/20250907141340/https://resources.here.io/docs/core/manage/security/api-security-desktop-owners/",
     "pdf_path": "assets/pdfs/jswisher-api-security-desktop.pdf",
     "preview_image_path": "",
-    "status": ""
-  }
+    "status": "ready"
+  },
+  {
+    "document_id": "doc_008",
+    "title": "Agent administration guide",
+    "public_ok": true,
+    "source_employer": "org_005",
+    "source_role": "Head of Documentation",
+    "notes": "",
+    "doc_url": "https://resources.here.io/docs/guide/admins/agents",
+    "archive_url": "https://web.archive.org/web/20251009080836/https://resources.here.io/docs/guide/admins/agents/",
+    "pdf_path": "assets/pdfs/jswisher-agent-admin-guide.pdf",
+    "preview_image_path": "",
+    "status": "ready"
+}
 ]
