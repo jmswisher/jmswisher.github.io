@@ -46,7 +46,8 @@ function assetExists(relPath) {
 /* --------------------------------- utilities --------------------------------- */
 
 function isPublished(record) {
-  return String(record.publish || true) !== false;
+//  console.log(`Checking publish status for record with ID "${record.sample_id || record.position_id || 'unknown'}":`, record.publish);
+  return Boolean(record.publish) !== false;
 }
 
 function escapeHtml(value = '') {
