@@ -2,7 +2,7 @@
     { 
         "position_id": "pos_org_006_lead_tech_writer_01",
         "page_slug": "lead_tech-writer-01",
-        "publish": true,
+        "publish": false,
         "position_title": "Lead Technical Writer",
         "public_label": "Lead Technical Writer Portfolio",
         "organization_id": "org_006",
@@ -39,7 +39,7 @@
   {
     "position_id": "pos_org_002_documentation_engineer_01",
     "page_slug": "documentation-engineer-01",
-    "publish": "true",
+    "publish": false,
     "position_title": "Documentation Engineer",
     "public_label": "Documentation Engineer Portfolio",
     "organization_id": "org_002",
@@ -57,7 +57,7 @@
     {
     "position_id": "pos_org_003_technical_writer_01",
     "page_slug": "technical-writer-01",
-    "publish": "true",
+    "publish": true,
     "position_title": "Technical Writer",
     "public_label": "Technical Writer Portfolio",
     "organization_id": "org_003",
@@ -67,6 +67,24 @@
     "priority_sample_types": ["concept", "architecture", "reference", "security-guide", "admin-guide", "task"],
     "priority_skills": ["procedures", "concepts", "workflow", "reference", "security", "troubleshooting"],
     "resume_pdf_path": "assets/pdfs/Janet-Swisher-Resume-Tech-Writer-01.pdf",
+    "cta": {
+      "label": "Contact Janet",
+      "url": "mailto:swisher@alumni.uchicago.edu"
+    }
+  },
+  {
+    "position_id": "pos_org_008_founding_tech_writer_01",
+    "page_slug": "founding-tech-writer-01",
+    "publish": true,
+    "position_title": "Founding Technical Writer",
+    "public_label": "Founding Technical Writer Portfolio",
+    "organization_id": "org_008",
+    "headline": "Owns documentation and other technical content to help developers succeed.",
+    "summary": "These samples demonstrate documentation of developer-facing infrastructure by clearly explaining security models, configuration systems, integration architecture, and real-world workflows",
+    "position_sequence": 5,
+    "priority_sample_types": [],
+    "priority_skills": [],
+    "resume_pdf_path": "assets/pdfs/janet-swisher-resume-founding-tech-writer-01.pdf",
     "cta": {
       "label": "Contact Janet",
       "url": "mailto:swisher@alumni.uchicago.edu"

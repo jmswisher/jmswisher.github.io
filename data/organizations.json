@@ -41,5 +41,11 @@
     "name": "Private 07",
     "org_type": "hiring_org",
     "notes": "Internal tracking record only"
+},
+{
+    "organization_id": "org_008",
+    "name": "Private 08",
+    "org_type": "hiring_org",
+    "notes": "Internal tracking record only" 
 }
 ]

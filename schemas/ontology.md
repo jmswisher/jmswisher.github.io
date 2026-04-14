@@ -75,7 +75,7 @@ Required fields:
 
 Optional fields:
 
-* `source_employer`: string, `organization.org_id` of the employer this document was written for
+* `source_employer`: string, `organization.organization_id` of the employer this document was written for
 * `source_role`: string, title of the role in which this document was written
 * `notes`: string, any notes about this document (not exposed on portfolio site)
 * `doc_url`: string, URL of the live version of the document
@@ -178,8 +178,9 @@ Required fields:
 Optional fields:
 
 * `title`: string, title of the sample (might not be the same as the document title)
-* `source_employer`: string, `organization.org_id` of the employer * * `asset_type`: string, how the sample was originally published: "web page", "PDF", "other"
-* `audience`: string, type of audience
+* `source_employer`: string, `organization.org_id` of the employer
+* `asset_type`: string, how the sample was originally published: "web page", "PDF", "other"
+* `audience`: array of strings, type of audience
 * `content_skill`: tag for the primary type of content-creation skill this sample represents
 * `position_fit_note`: string, explanation of why this sample is illustrative for this position
 * `sample_type`: string, content type of the sample
@@ -193,17 +194,22 @@ for whom this was done
 * `live_url`: string, URL of a live version of the sample
 * `pdf_path`: string, local path to a PDF of the sample
 
+Examples of `audience` values:
+
+* `developers`
+* `web developers`
+* `administrators`
+* `platform administrators`
+* `enterprise architects`
+
 Examples of `sample_type` values:
 
 * `concept`
+* `best-practices`
 * `reference`
-* `developer-guide`
-* `security-guide`
 * `troubleshooting`
-* `workflow`
-* `admin-guide`
-* `architecture`
 * `release-note`
+* `task`
 * `tutorial`
 
 Examples of `content_skill` values:
@@ -214,6 +220,95 @@ Examples of `content_skill` values:
 * `best-practices-guidance`
 * `workflow-explanation`
 * `reference-structuring`
+
+Examples of `skills` values:
+
+* `Architecture documentation`
+* `Conceptual documentation`
+* `Configuration documentation`
+* `Content strategy`
+* `Developer experience`
+* `Enterprise software documentation`
+* `Web platform documentation`
+* `Web standards documentation`
+* `Platform documentation`
+* `Platform administration documentation`
+* `Configuration documentation`
+* `Security documentation`
+* `Task-oriented writing`
+* `Markdown authoring`
+* `GitHub workflows`
+* `Cross-team collaboration`
+
+Examples of `topics` values:
+
+* `accessibility`
+* `architecture overview`
+* `debugging`
+* `log collection`
+* `support workflows`
+* `tooling`
+* `support operations`
+* `web security`
+* `dns`
+* `subdomain takeover`
+* `vulnerability explanation`
+* `vulnerability detection`
+* `dns misconfiguration`
+* `security mitigation`
+* `dns management`
+* `infrastructure hygiene`
+* `local API security`
+* `runtime security`
+* `application platform security`
+* `API access restrictions`
+* `WCAG`
+* `WCAG compliance`
+* `accessible names`
+* `accessible labeling`
+* `UI accessibility`
+* `ARIA`
+* `screen readers`
+* `HTML semantics`
+* `ARIA labels`
+* `application manifest`
+* `application configuration`
+* `runtime settings`
+* `manifest schema`
+* `configuration fields`
+* `application capabilities`
+* `fallback manifests`
+* `fallback configuration`
+* `runtime resilience`
+* `startup process`
+* `runtime configuration`
+* `manifest loading`
+* `manifest management`
+* `application setup`
+* `desktop API security`
+* `platform permissions`
+* `managed desktop security`
+* `API access control`
+* `desktop administration`
+* `runtime security`
+* `systems integration`
+* `enterprise SaaS platforms`
+* `browser-based productivity tools`
+* `platform administration`
+* `agent configuration`
+* `enterprise integrations`
+
+Examples of `industries` values:
+
+* `enterprise software`
+* `fintech`
+* `developer platform`
+* `managed platforms`
+* `financial services`
+* `web platform`
+* `browser ecosystem`
+* `API security`
+* `access control`
 
 ### selection
 

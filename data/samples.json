@@ -505,6 +505,9 @@
   "skills": ["Platform documentation", "Conceptual documentation", "Enterprise software documentation"],
   "topics": ["system integrations", "enterprise SaaS platforms", "browser-based productivity tools"],
   "industries": ["enterprise software", "financial services"],
+  "live_url": "https://resources.here.io/docs/guide/admins/agents",
+  "archive_url": "https://web.archive.org/web/20251009080836/https://resources.here.io/docs/guide/admins/agents/",
+  "pdf_path": "assets/pdfs/jswisher-agent-admin-guide.pdf",
   "fit_note": "Demonstrates ability to explain platform integration architecture and third-party connectivity concepts.",
   "publish": true
 },
@@ -520,6 +523,9 @@
   "skills": ["Administrative documentation", "Task-oriented writing", "Enterprise software documentation"],
   "topics": ["platform administration", "agent configuration", "enterprise integrations"],
   "industries": ["enterprise software", "fintech"],
+  "live_url": "https://resources.here.io/docs/guide/admins/agents",
+  "archive_url": "https://web.archive.org/web/20251009080836/https://resources.here.io/docs/guide/admins/agents/",
+  "pdf_path": "assets/pdfs/jswisher-agent-admin-guide.pdf",
   "fit_note": "Shows clear step-by-step administrative task documentation for configuring enterprise integrations.",
   "publish": true
 }

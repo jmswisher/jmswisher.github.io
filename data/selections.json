@@ -215,5 +215,55 @@
         "display_group": "reference",
         "custom_label": "",
         "custom_fit_note": ""
+    },
+    {
+        "selection_id": "sel_pos_org_008_founding_tech_writer_01_01",
+        "position_id": "pos_org_008_founding_tech_writer_01",
+        "sample_id": "smp_003",
+        "priority_rank": 1,
+        "publish": true,
+        "display_group": "security-guide",
+        "custom_label": "",
+        "custom_fit_note": ""
+    },
+    {
+        "selection_id": "sel_pos_org_008_founding_tech_writer_01_02",
+        "position_id": "pos_org_008_founding_tech_writer_01",
+        "sample_id": "smp_006",
+        "priority_rank": 2,
+        "publish": true,
+        "display_group": "security-guide",
+        "custom_label": "",
+        "custom_fit_note": ""
+    },
+    {
+        "selection_id": "sel_pos_org_008_founding_tech_writer_01_03",
+        "position_id": "pos_org_008_founding_tech_writer_01",
+        "sample_id": "smp_011",
+        "priority_rank": 3,
+        "publish": true,
+        "display_group": "reference",
+        "custom_label": "",
+        "custom_fit_note": ""
+    },
+    {
+        "selection_id": "sel_pos_org_008_founding_tech_writer_01_04",
+        "position_id": "pos_org_008_founding_tech_writer_01",
+        "sample_id": "smp_017",
+        "priority_rank": 4,
+        "publish": true,
+        "display_group": "concept, procedure",
+        "custom_label": "",
+        "custom_fit_note": ""
+    },
+    {
+        "selection_id": "sel_pos_org_008_founding_tech_writer_01_05",
+        "position_id": "pos_org_008_founding_tech_writer_01",
+        "sample_id": "smp_001",
+        "priority_rank": 5,
+        "publish": true,
+        "display_group": "procedure",
+        "custom_label": "",
+        "custom_fit_note": ""
     }
 ]
