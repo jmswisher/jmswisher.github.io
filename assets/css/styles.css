@@ -133,12 +133,13 @@ h2 {
   background: var(--accent);
   color: white;
 }
-
+/*
 .button.secondary {
   background: transparent;
   color: black;
   border-color: rgba(0,0,0,.28);
 }
+*/
 
 .media {
   display: grid;
