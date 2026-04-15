@@ -312,9 +312,12 @@ function main() {
   copyDir(assetsDir, path.join(outDir, 'assets'));
   fs.writeFileSync(path.join(outDir, '.nojekyll'), '');
 
+  positions.sort((a, b) => (a.position_sequence || 999) - (b.position_sequence || 999));
+
   fs.writeFileSync(path.join(outDir, 'index.html'), renderHomePage(site, positions, samples));
 
   for (const position of positions) {
+    console.log(`Building page for position "${position.position_id}" with sequence ${position.position_sequence}...`);
     const selectedItems = selections
       .filter(sel => sel.position_id === position.position_id && isPublished(sel))
       .sort((a, b) => (a.priority_rank || 999) - (b.priority_rank || 999))
@@ -324,7 +327,7 @@ function main() {
         return { selection: sel, sample };
      })
     .filter(Boolean);
-
+    
     const outputPath = path.join(outDir, 'positions', `${position.page_slug}.html`);
     fs.writeFileSync(outputPath, renderPositionPage(site, position, selectedItems, 1));
   }
