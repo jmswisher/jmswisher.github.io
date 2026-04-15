@@ -142,7 +142,7 @@
       "Cross-team collaboration",
       "Content strategy"
     ],
-    "summary": "Provides practical mitigation strategies for preventing subdomain takeover vulnerabilities through DNS management and infrastructure hygiene.",
+    "summary": "Explains subdomain takeover vulnerabilities and how misconfigured DNS and external dependencies can introduce security risks.",
     "topics": [
       "security mitigation",
       "dns management",
@@ -322,7 +322,7 @@
     "asset_type": "web page",
     "audience": ["developers"],
     "content_skill": "reference-structuring",
-    "position_fit_note": "Demonstrates structured reference documentation for configuration-based systems. The same info is available in the API reference, but spread across a number of classes.",
+    "position_fit_note": "Demonstrates structured reference documentation for configuration-based systems,detailing fields and behaviors that control runtime capabilities. The same info is available in the API reference, but spread across a number of classes.",
     "sample_type": "reference",
     "skills": [
       "Platform documentation",

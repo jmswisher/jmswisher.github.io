@@ -20,7 +20,7 @@
     {
     "position_id": "pos_org_007_sr_tech_writer_01",
     "page_slug": "sr_tech-writer-01",
-    "publish": true,
+    "publish": false,
     "position_title": "Senior Technical Writer",
     "public_label": "Senior Technical Writer Portfolio",
     "organization_id": "org_007",
@@ -85,6 +85,24 @@
     "priority_sample_types": [],
     "priority_skills": [],
     "resume_pdf_path": "assets/pdfs/janet-swisher-resume-founding-tech-writer-01.pdf",
+    "cta": {
+      "label": "Contact Janet",
+      "url": "mailto:swisher@alumni.uchicago.edu"
+    }
+  },
+  {
+    "position_id": "pos_org_009_tech_writer_02",
+    "page_slug": "tech-writer-02",
+    "publish": true,
+    "position_title": "Technical Writer",
+    "public_label": "Technical Writer Portfolio",
+    "organization_id": "org_009",
+    "headline": "Creates developer-focused documentation while shaping documentation delivery to support secure, real-world implementation of identity verification systems.",
+    "summary": "Samples focused on API and platform integration, including security models, configuration reference, and developer workflows.",
+    "position_sequence": 2,
+    "priority_sample_types": [],
+    "priority_skills": [],
+    "resume_pdf_path": "assets/pdfs/janet-swisher-resume-tech-writer-02.pdf",
     "cta": {
       "label": "Contact Janet",
       "url": "mailto:swisher@alumni.uchicago.edu"
