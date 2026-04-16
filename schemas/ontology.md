@@ -178,14 +178,13 @@ Required fields:
 Optional fields:
 
 * `title`: string, title of the sample (might not be the same as the document title)
-* `source_employer`: string, `organization.org_id` of the employer
+* `source_employer`: string, `organization.org_id` of the employer for whom this was done
 * `asset_type`: string, how the sample was originally published: "web page", "PDF", "other"
 * `audience`: array of strings, type of audience
 * `content_skill`: tag for the primary type of content-creation skill this sample represents
 * `position_fit_note`: string, explanation of why this sample is illustrative for this position
 * `sample_type`: string, content type of the sample
 * `skills`: array of strings, general skills that this sample demonstrates
-for whom this was done
 * `summary`: string, description of the sample
 * `topics`: array of strings, topics covered by the sample
 * `industries`: array of strings, industries where this sample is applicable
@@ -201,6 +200,7 @@ Examples of `audience` values:
 * `administrators`
 * `platform administrators`
 * `enterprise architects`
+* `end users`
 
 Examples of `sample_type` values:
 
@@ -223,92 +223,26 @@ Examples of `content_skill` values:
 
 Examples of `skills` values:
 
-* `Architecture documentation`
-* `Conceptual documentation`
-* `Configuration documentation`
-* `Content strategy`
-* `Developer experience`
-* `Enterprise software documentation`
-* `Web platform documentation`
-* `Web standards documentation`
-* `Platform documentation`
-* `Platform administration documentation`
-* `Configuration documentation`
-* `Security documentation`
-* `Task-oriented writing`
-* `Markdown authoring`
-* `GitHub workflows`
+* `Best practices guidance`
+* `Conceptual explanation`
+* `Configuration guidance`
 * `Cross-team collaboration`
-
-Examples of `topics` values:
-
-* `accessibility`
-* `architecture overview`
-* `debugging`
-* `log collection`
-* `support workflows`
-* `tooling`
-* `support operations`
-* `web security`
-* `dns`
-* `subdomain takeover`
-* `vulnerability explanation`
-* `vulnerability detection`
-* `dns misconfiguration`
-* `security mitigation`
-* `dns management`
-* `infrastructure hygiene`
-* `local API security`
-* `runtime security`
-* `application platform security`
-* `API access restrictions`
-* `WCAG`
-* `WCAG compliance`
-* `accessible names`
-* `accessible labeling`
-* `UI accessibility`
-* `ARIA`
-* `screen readers`
-* `HTML semantics`
-* `ARIA labels`
-* `application manifest`
-* `application configuration`
-* `runtime settings`
-* `manifest schema`
-* `configuration fields`
-* `application capabilities`
-* `fallback manifests`
-* `fallback configuration`
-* `runtime resilience`
-* `startup process`
-* `runtime configuration`
-* `manifest loading`
-* `manifest management`
-* `application setup`
-* `desktop API security`
-* `platform permissions`
-* `managed desktop security`
-* `API access control`
-* `desktop administration`
-* `runtime security`
-* `systems integration`
-* `enterprise SaaS platforms`
-* `browser-based productivity tools`
-* `platform administration`
-* `agent configuration`
-* `enterprise integrations`
+* `Developer tools`
+* `Integration guidance`
+* `Platform administration`
+* `Procedural instructions`
+* `Risk analysis`
+* `Security concepts`
+* `Structured reference`
+* `Troubleshooting guidance`
+* `Workflow explanation`
 
 Examples of `industries` values:
 
 * `enterprise software`
-* `fintech`
 * `developer platform`
-* `managed platforms`
-* `financial services`
 * `web platform`
 * `browser ecosystem`
-* `API security`
-* `access control`
 
 ### selection
 

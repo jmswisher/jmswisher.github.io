@@ -7,13 +7,13 @@
     "source_employer": "org_005",
     "asset_type": "web page",
     "audience": ["developers"],
-    "content_skill": "procedural-instruction",
+    "content_skill": "procedural-instructions",
     "position_fit_note": "Strong fit for roles seeking procedural troubleshooting and developer support documentation.",
     "sample_type": "task",
     "skills": [
-      "Developer experience",
-      "Markdown authoring",
-      "GitHub workflows"
+      "Procedural instructions",
+      "Troubleshooting guidance",
+      "Developer tools"
     ],
     "summary": "Explains how to use the log uploader tool to collect and submit logs for debugging and support troubleshooting workflows.",
     "topics": [
@@ -42,9 +42,8 @@
     "position_fit_note": "Conceptual explanation of a technical support tool, along with step-by-step instructions.",
     "sample_type": "concept",
     "skills": [
-      "Markdown authoring",
-      "Developer experience",
-      "GitHub workflows"
+      "Conceptual explanation",
+      "Developer tools"
     ],
     "summary": "Introduces the purpose and usage context of the log uploader tool within the product’s debugging workflow.",
     "topics": [
@@ -73,9 +72,8 @@
     "position_fit_note": "Strong example of explaining a complex security concept to developers and site operators.",
     "sample_type": "concept",
     "skills": [
-      "Security documentation",
-      "Developer experience",
-      "Cross-team collaboration"
+      "Conceptual explanation",
+      "Security concepts"
     ],
     "summary": "Explains the mechanics of subdomain takeover vulnerabilities, including how DNS configurations and external service dependencies can create exploitable conditions.",
     "topics": [
@@ -86,8 +84,7 @@
     ],
     "industries": [
       "web platform",
-      "developer platform",
-      "browser ecosystem"
+      "developer platform"
     ],
     "archive_url": "https://web.archive.org/web/20200913121501/https://developer.mozilla.org/en-US/docs/Web/Security/Subdomain_takeovers",
     "image_path": "",
@@ -106,9 +103,8 @@
     "position_fit_note": "Useful sample for roles emphasizing security documentation and risk awareness.",
     "sample_type": "concept",
     "skills": [
-      "Security documentation",
-      "Cross-team collaboration",
-      "Developer experience"
+      "Security concepts",
+      "Risk analysis"
     ],
     "summary": "Describes the conditions that allow subdomain takeover vulnerabilities to occur and how developers can recognize misconfigurations that create risk.",
     "topics": [
@@ -134,13 +130,11 @@
     "asset_type": "web page",
     "audience": ["web developers"],
     "content_skill": "best-practices-guidance",
-    "position_fit_note": "Demonstrates writing practical security guidance for developers and infrastructure teams.",
+    "position_fit_note": "Practical security guidance for developers and infrastructure teams.",
     "sample_type": "concept",
     "skills": [
-      "Security documentation",
-      "Developer experience",
-      "Cross-team collaboration",
-      "Content strategy"
+      "Security concepts",
+      "Best practices guidance"
     ],
     "summary": "Explains subdomain takeover vulnerabilities and how misconfigured DNS and external dependencies can introduce security risks.",
     "topics": [
@@ -166,11 +160,11 @@
     "asset_type": "web page",
     "audience": ["developers"],
     "content_skill": "conceptual-explanation",
-    "position_fit_note": "Demonstrates ability to explain access control for platform APIs.",
+    "position_fit_note": "Explanation of access control for platform APIs.",
     "sample_type": "concept",
     "skills": [
-      "Security documentation",
-      "Developer experience"
+      "Security concepts",
+      "Conceptual explanation"
     ],
     "summary": "Explains the security model governing local APIs exposed by the platform runtime, including how access restrictions protect system capabilities.",
     "topics": [
@@ -180,8 +174,7 @@
     ],
     "industries": [
       "enterprise software",
-      "API security",
-      "access control"
+      "developer platform"
     ],
     "archive_url": "https://web.archive.org/web/20251208135339/https://resources.here.io/docs/core/develop/security/api-security/",
     "image_path": "",
@@ -197,11 +190,11 @@
     "asset_type": "web page",
     "audience": ["developers"],
     "content_skill": "workflow-explanation",
-    "position_fit_note": "Demonstrates documentation of defensive security measures for platform APIs.",
+    "position_fit_note": "Explanation of defensive security measures for platform APIs.",
     "sample_type": "security-guide",
     "skills": [
-      "Security documentation",
-      "Platform documentation"
+      "Security concepts",
+      "Workflow explanation"
     ],
     "summary": "Describes mechanisms used to request access to APIs that are restricted on the local system.",
     "topics": [
@@ -226,12 +219,12 @@
     "asset_type": "web page",
     "audience": ["web developers"],
     "content_skill": "conceptual-explanation",
-    "position_fit_note": "Demonstrates ability to explain accessibility concepts clearly for web developers. Co-created with a Firefox engineer and linked from Firefox Dev Tools.",
+    "position_fit_note": "Explanation of accessibility concepts for web developers. Co-created with a Firefox engineer and linked from Firefox Dev Tools.",
     "sample_type": "concept",
     "skills": [
+      "Conceptual explanation",
       "Cross-team collaboration",
-      "Web platform documentation",
-      "Web standards documentation"
+      "Developer tools"
     ],
     "summary": "Explains the difference between visible labels and accessible names and how assistive technologies interpret them when interacting with web interfaces.",
     "topics": [
@@ -261,8 +254,8 @@
     "position_fit_note": "Illustrates best-practices guidance for implementing accessible user interfaces.",
     "sample_type": "concept",
     "skills": [
-      "Accessibility documentation",
-      "Web platform documentation"
+      "Best practices guidance",
+      "Conceptual explanation"
     ],
     "summary": "Summarizes recommended practices for ensuring that interface elements have clear and meaningful labels that support accessible navigation.",
     "topics": [
@@ -286,16 +279,16 @@
     "sample_id": "smp_010",
     "document_id": "doc_005",
     "publish": true,
-    "title": "Application manifest concept and purpose",
+    "title": "Application manifest overview",
     "source_employer": "org_005",
     "asset_type": "web page",
     "audience": ["developers"],
     "content_skill": "conceptual-explanation",
-    "position_fit_note": "Demonstrates ability to explain configuration mechanisms within an application platform.",
+    "position_fit_note": "Explanation of configuration mechanisms within an application platform.",
     "sample_type": "concept",
     "skills": [
-      "Platform documentation",
-      "Configuration documentation"
+      "Conceptual explanation",
+      "Configuration guidance"
     ],
     "summary": "Explains the role of the application manifest in defining application configuration, capabilities, and runtime behavior within the platform.",
     "topics": [
@@ -322,11 +315,11 @@
     "asset_type": "web page",
     "audience": ["developers"],
     "content_skill": "reference-structuring",
-    "position_fit_note": "Demonstrates structured reference documentation for configuration-based systems,detailing fields and behaviors that control runtime capabilities. The same info is available in the API reference, but spread across a number of classes.",
+    "position_fit_note": "Structured reference documentation for configuration-based systems, detailing fields and behaviors that control runtime capabilities. The same info is available in the API reference, but spread across a number of classes.",
     "sample_type": "reference",
     "skills": [
-      "Platform documentation",
-      "Configuration documentation"
+      "Structured reference",
+      "Configuration guidance"
     ],
     "summary": "Documents the structure and fields used in the application manifest file and how they control application capabilities.",
     "topics": [
@@ -347,16 +340,15 @@
     "sample_id": "smp_012",
     "document_id": "doc_006",
     "publish": true,
-    "title": "Fallback manifest concept and purpose",
+    "title": "Fallback manifest overview",
     "source_employer": "org_005",
     "asset_type": "web page",
     "audience": ["developers"],
     "content_skill": "conceptual-explanation",
-    "position_fit_note": "Demonstrates ability to explain resilience mechanisms in a configuration-driven platform.",
+    "position_fit_note": "Explanation of resilience mechanisms in a configuration-driven platform.",
     "sample_type": "concept",
     "skills": [
-      "Configuration documentation",
-      "Platform documentation"
+      "Configuration guidance"
     ],
     "summary": "Explains the role of fallback manifests in the platform and how they ensure applications can start when a primary manifest is unavailable.",
     "topics": [
@@ -385,8 +377,7 @@
     "position_fit_note": "Illustrates documentation of platform runtime behavior and configuration fallbacks.",
     "sample_type": "concept",
     "skills": [
-      "Platform documentation",
-      "Architecture documentation"
+      "Workflow explanation"
     ],
     "summary": "Explains how the platform loads fallback manifests during the application startup process when a primary manifest cannot be used.",
     "topics": [
@@ -412,11 +403,11 @@
     "asset_type": "web page",
     "audience": ["developers"],
     "content_skill": "reference-structuring",
-    "position_fit_note": "Demonstrates developer-facing reference information for managing configuration resilience.",
+    "position_fit_note": "Developer-facing reference information for managing configuration resilience.",
     "sample_type": "reference",
     "skills": [
-      "Platform documentation",
-      "Configuration documentation"
+      "Structured reference",
+      "Configuration guidance"
     ],
     "summary": "Provides reference information on fallback manifest configuration, events emitted during fallback checks, and typical log output for fallback scenarios.",
     "topics": [
@@ -442,11 +433,12 @@
     "asset_type": "web page",
     "audience": ["administrators"],
     "content_skill": "conceptual-explanation",
-    "position_fit_note": "Demonstrates ability to explain platform security models for administrative audiences.",
+    "position_fit_note": "Explanation of a platform security model for administrators.",
     "sample_type": "concept",
     "skills": [
-      "Security documentation",
-      "Platform administration documentation"
+      "Conceptual explanation",
+      "Security concepts",
+      "Platform administration"
     ],
     "summary": "Explains the security model governing APIs available on managed desktops and how administrators control access to platform capabilities.",
     "topics": [
@@ -456,7 +448,7 @@
     ],
     "industries": [
       "enterprise software",
-      "managed platforms"
+      "developer platform"
     ],
     "archive_url": "https://web.archive.org/web/20250907141340/https://resources.here.io/docs/core/manage/security/api-security-desktop-owners/",
     "image_path": "",
@@ -471,12 +463,13 @@
     "source_employer": "org_005",
     "asset_type": "web page",
     "audience": ["administrators"],
-    "content_skill": "procedural-instruction",
+    "content_skill": "procedural-instructions",
     "position_fit_note": "Shows administrative guidance for securing platform APIs on managed desktops.",
     "sample_type": "task",
     "skills": [
-      "Security documentation",
-      "Platform administration documentation"
+      "Security concepts",
+      "Platform administration",
+      "Procedural instructions"
     ],
     "summary": "Describes how desktop owners restrict or allow access to APIs to protect system capabilities and reduce security risks.",
     "topics": [
@@ -486,7 +479,7 @@
     ],
     "industries": [
       "enterprise software",
-      "managed platforms"
+      "developer platform"
     ],
     "archive_url": "https://web.archive.org/web/20250907141340/https://resources.here.io/docs/core/manage/security/api-security-desktop-owners/",
     "image_path": "",
@@ -498,17 +491,28 @@
   "document_id": "doc_008",
   "title": "Agents: integrating external systems with HERE Enterprise Browser",
   "sample_type": "concept",
-  "content_mode": "conceptual-explanation",
+  "content_skill": "conceptual-explanation",
   "asset_type": "web_page",
-  "audience": ["platform administrators", "enterprise architects"],
+  "audience": ["platform administrators"],
   "summary": "Explains how agents connect HERE Enterprise Browser to external systems such as Microsoft 365, Salesforce, and Slack, enabling cross-application search and interoperability.",
-  "skills": ["Platform documentation", "Conceptual documentation", "Enterprise software documentation"],
-  "topics": ["system integrations", "enterprise SaaS platforms", "browser-based productivity tools"],
-  "industries": ["enterprise software", "financial services"],
+  "skills": [
+    "Conceptual explanation", 
+    "Platform administration",
+    "Integration guidance"
+  ],
+  "topics": [
+    "system integrations", 
+    "enterprise SaaS platforms", 
+    "browser-based productivity tools"
+    ],
+  "industries": [
+    "enterprise software", 
+    "developer platform"
+    ],
   "live_url": "https://resources.here.io/docs/guide/admins/agents",
   "archive_url": "https://web.archive.org/web/20251009080836/https://resources.here.io/docs/guide/admins/agents/",
   "pdf_path": "assets/pdfs/jswisher-agent-admin-guide.pdf",
-  "fit_note": "Demonstrates ability to explain platform integration architecture and third-party connectivity concepts.",
+  "fit_note": "Explanation of platform integration architecture and third-party connectivity concepts.",
   "publish": true
 },
 {
@@ -516,13 +520,22 @@
   "document_id": "doc_008",
   "title": "Configure an agent integration in the HERE Admin Console",
   "sample_type": "task",
-  "content_mode": "task-guidance",
+  "content_skill": "procedural-instructions",
   "asset_type": "web_page",
   "audience": ["platform administrators"],
   "summary": "Step-by-step instructions for creating and configuring an 'agent' (integration) in the HERE Admin Console, including selecting the agent type, entering configuration values, and granting access.",
-  "skills": ["Administrative documentation", "Task-oriented writing", "Enterprise software documentation"],
-  "topics": ["platform administration", "agent configuration", "enterprise integrations"],
-  "industries": ["enterprise software", "fintech"],
+  "skills": [
+    "Administrative guidance", 
+    "Procedural instructions",
+    "Platform administration"
+    ],
+  "topics": [
+    "platform administration", 
+    "agent configuration", 
+    "enterprise integrations"
+    ],
+  "industries": [
+    "enterprise software"],
   "live_url": "https://resources.here.io/docs/guide/admins/agents",
   "archive_url": "https://web.archive.org/web/20251009080836/https://resources.here.io/docs/guide/admins/agents/",
   "pdf_path": "assets/pdfs/jswisher-agent-admin-guide.pdf",
