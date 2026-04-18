@@ -39,7 +39,7 @@
   {
     "position_id": "pos_org_002_documentation_engineer_01",
     "page_slug": "documentation-engineer-01",
-    "publish": false,
+    "publish": true,
     "position_title": "Documentation Engineer",
     "public_label": "Documentation Engineer Portfolio",
     "organization_id": "org_002",
