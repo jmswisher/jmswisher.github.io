@@ -120,7 +120,7 @@
     "position_sequence": 1,
     "priority_sample_types": ["concept", "procedure", "architecture", "reference", "admin-guide"],
     "priority_skills": ["Conceptual explanation", "Best practices guidance", "Workflow explanation", "Structured reference",  "Procedural instructions", "Information architecture"],
-    "resume_pdf_path": "assets/pdfs/Janet-Swisher-Resume-Director-Tech_writing.pdf",
+    "resume_pdf_path": "assets/pdfs/Janet-Swisher-Resume-Director-Tech-Writing.pdf",
     "cta": {
       "label": "Contact Janet",
       "url": "mailto:swisher@alumni.uchicago.edu"
