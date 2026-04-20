@@ -116,7 +116,7 @@
     "public_label": "Director, Technical Writing Portfolio",
     "organization_id": "org_010",
     "headline": "Helps redefine how technical documentation is created, delivered, and experienced across the organization. Challenges long-standing assumptions, helps engineering teams take greater ownership of source documentation, and explores how documentation can become more useful inside the product experience.",
-    "summary": "These samples reflect work designing documentation systems for developer platforms, including structured reference content, workflow-driven tasks, and conceptual explanations of configuration, security, and runtime behavior.",
+    "summary": "These samples reflect work designing a documentation system, including structured reference content, workflow-driven tasks, and conceptual explanations. They are part of a larger system designed to support developer workflows across onboarding, application or platform development, and deployment.",
     "position_sequence": 1,
     "priority_sample_types": ["concept", "procedure", "architecture", "reference", "admin-guide"],
     "priority_skills": ["Conceptual explanation", "Best practices guidance", "Workflow explanation", "Structured reference",  "Procedural instructions", "Information architecture"],
