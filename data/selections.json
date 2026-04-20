@@ -324,10 +324,10 @@
         "publish": true,
         "display_group": "Reference",
         "custom_label": "",
-        "custom_fit_note": "Structured reference documentation for a configuration-driven platform, consolidating behavior spread across APIs into a single, developer-usable model. Developed as part of a docs-as-code system with cross-team contributions."
+        "custom_fit_note": "Structured reference documentation for a configuration-driven platform, consolidating properties spread across APIs into a single, developer-usable model. I defined the structure for the article, and updated it as properties were added or changed in the product."
     },
     {
-        "selection_id": "sel_pos_org_010_director_tw_01",
+        "selection_id": "sel_pos_org_010_director_tw_01_02",
         "position_id": "pos_org_010_director_tw_01",
         "sample_id": "smp_012",
         "priority_rank": 2,
@@ -344,7 +344,7 @@
         "publish": true,
         "display_group": "concept",
         "custom_label": "",
-        "custom_fit_note": "Documentation of a platform-level security model governing API access, developed in collaboration with engineering to accurately represent runtime constraints and permission boundaries."
+        "custom_fit_note": "Documentation of a platform-level security model governing API access, developed in collaboration with engineering to accurately represent runtime constraints and permission boundaries. Written in collaboration with the architect of the security model."
     },
     {
         "selection_id": "sel_pos_org_010_director_tw_01_04",
@@ -364,6 +364,6 @@
         "publish": true,
         "display_group": "concept",
         "custom_label": "",
-        "custom_fit_note": "MDN Web Docs article explaining a complex web security vulnerability, translating DNS and infrastructure behavior into clear guidance for developers and site operators. Developed collaboratively with a Mozilla web security engineer."
+        "custom_fit_note": "MDN Web Docs article explaining a complex web security vulnerability, translating DNS and infrastructure behavior into clear guidance for developers and site operators. Developed collaboratively with a Mozilla web security engineer on MDN's custom wiki platform."
     }
 ]
