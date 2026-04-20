@@ -9,7 +9,7 @@
     "audience": ["developers"],
     "content_skill": "procedural-instructions",
     "position_fit_note": "Strong fit for roles seeking procedural troubleshooting and developer support documentation.",
-    "sample_type": "task",
+    "sample_type": "procedure",
     "skills": [
       "Procedural instructions",
       "Troubleshooting guidance",
@@ -465,7 +465,7 @@
     "audience": ["administrators"],
     "content_skill": "procedural-instructions",
     "position_fit_note": "Shows administrative guidance for securing platform APIs on managed desktops.",
-    "sample_type": "task",
+    "sample_type": "procedure",
     "skills": [
       "Security concepts",
       "Platform administration",
@@ -519,7 +519,7 @@
   "sample_id": "smp_018",
   "document_id": "doc_008",
   "title": "Configure an agent integration in the HERE Admin Console",
-  "sample_type": "task",
+  "sample_type": "procedure",
   "content_skill": "procedural-instructions",
   "asset_type": "web_page",
   "audience": ["platform administrators"],
@@ -539,7 +539,7 @@
   "live_url": "https://resources.here.io/docs/guide/admins/agents",
   "archive_url": "https://web.archive.org/web/20251009080836/https://resources.here.io/docs/guide/admins/agents/",
   "pdf_path": "assets/pdfs/jswisher-agent-admin-guide.pdf",
-  "fit_note": "Shows clear step-by-step administrative task documentation for configuring enterprise integrations.",
+  "fit_note": "Shows clear step-by-step administrative procedure documentation for configuring enterprise integrations.",
   "publish": true
 }
 ]

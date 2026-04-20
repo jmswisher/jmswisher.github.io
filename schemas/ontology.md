@@ -209,7 +209,7 @@ Examples of `sample_type` values:
 * `reference`
 * `troubleshooting`
 * `release-note`
-* `task`
+* `procedure`
 * `tutorial`
 
 Examples of `content_skill` values:
