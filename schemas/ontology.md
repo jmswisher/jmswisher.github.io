@@ -178,7 +178,6 @@ Required fields:
 Optional fields:
 
 * `title`: string, title of the sample (might not be the same as the document title)
-* `source_employer`: string, `organization.org_id` of the employer for whom this was done
 * `asset_type`: string, how the sample was originally published: "web page", "PDF", "other"
 * `audience`: array of strings, type of audience
 * `content_skill`: tag for the primary type of content-creation skill this sample represents
