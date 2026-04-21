@@ -24,11 +24,7 @@
     "industries": [
       "developer platform",
       "enterprise software"
-    ],
-    "archive_url": "https://web.archive.org/web/20250523233150/https://resources.here.io/docs/core/develop/debug/",
-    "image_path": "",
-    "live_url": "https://resources.here.io/docs/core/develop/debug/log-uploader",
-    "pdf_path": "assets/pdfs/jswisher-log-uploader-tool.pdf"
+    ]
   },
   {
     "sample_id": "smp_002",
@@ -54,11 +50,7 @@
     "industries": [
       "developer platform",
       "enterprise software"
-    ],
-    "archive_url": "https://web.archive.org/web/20250523233150/https://resources.here.io/docs/core/develop/debug/",
-    "image_path": "",
-    "live_url": "https://resources.here.io/docs/core/develop/debug/log-uploader",
-    "pdf_path": "assets/pdfs/jswisher-log-uploader-tool.pdf"
+    ]
   },
   {
     "sample_id": "smp_003",
@@ -85,11 +77,7 @@
     "industries": [
       "web platform",
       "developer platform"
-    ],
-    "archive_url": "https://web.archive.org/web/20200913121501/https://developer.mozilla.org/en-US/docs/Web/Security/Subdomain_takeovers",
-    "image_path": "",
-    "live_url": "",
-    "pdf_path": "assets/pdfs/jswisher-subdomain-takeovers.pdf"
+    ]
   },
   {
     "sample_id": "smp_004",
@@ -115,11 +103,7 @@
     "industries": [
       "web platform",
       "developer platform"
-    ],
-    "archive_url": "https://web.archive.org/web/20200913121501/https://developer.mozilla.org/en-US/docs/Web/Security/Subdomain_takeovers",
-    "image_path": "",
-    "live_url": "",
-    "pdf_path": "assets/pdfs/jswisher-subdomain-takeovers.pdf"
+    ]
   },
   {
     "sample_id": "smp_005",
@@ -142,14 +126,10 @@
       "dns management",
       "infrastructure hygiene"
     ],
-    "archive_url": "https://web.archive.org/web/20200913121501/https://developer.mozilla.org/en-US/docs/Web/Security/Subdomain_takeovers",
     "industries": [
       "web platform",
       "developer platform"
-    ],
-    "image_path": "",
-    "live_url": "",
-    "pdf_path": "assets/pdfs/jswisher-subdomain-takeovers.pdf"
+    ]
   },
   {
     "sample_id": "smp_006",
@@ -175,11 +155,7 @@
     "industries": [
       "enterprise software",
       "developer platform"
-    ],
-    "archive_url": "https://web.archive.org/web/20251208135339/https://resources.here.io/docs/core/develop/security/api-security/",
-    "image_path": "",
-    "live_url": "https://resources.here.io/docs/core/develop/debug/api-security",
-    "pdf_path": "assets/pdfs/jswisher-api-security.pdf"
+    ]
   },
   {
     "sample_id": "smp_007",
@@ -204,11 +180,7 @@
     "industries": [
       "enterprise software",
       "developer platform"
-    ],
-    "archive_url": "https://web.archive.org/web/20251208135339/https://resources.here.io/docs/core/develop/security/api-security/",
-    "image_path": "",
-    "live_url": "https://resources.here.io/docs/core/develop/debug/api-security",
-    "pdf_path": "assets/pdfs/jswisher-api-security.pdf"
+    ]
   },
   {
     "sample_id": "smp_008",
@@ -236,11 +208,7 @@
     "industries": [
       "web platform",
       "browser ecosystem"
-    ],
-    "archive_url": "https://web.archive.org/web/20200702135212/https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names",
-    "image_path": "",
-    "live_url": "",
-    "pdf_path": "assets/pdfs/jswisher-text-labels-and-names.pdf"
+    ]
   },
   {
     "sample_id": "smp_009",
@@ -269,11 +237,7 @@
     "industries": [
       "web platform",
       "browser ecosystem"
-    ],
-    "archive_url": "https://web.archive.org/web/20200702135212/https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names",
-    "image_path": "",
-    "live_url": "https://resources.here.io/docs/core/develop/manifests/",
-    "pdf_path": "assets/pdfs/jswisher-text-labels-and-names.pdf"
+    ]
   },
   {
     "sample_id": "smp_010",
@@ -300,11 +264,7 @@
     "industries": [
       "enterprise software",
       "developer platform"
-    ],
-    "archive_url": "https://web.archive.org/web/20250523233150/https://resources.here.io/docs/core/develop/manifests/",
-    "image_path": "",
-    "live_url": "",
-    "pdf_path": "assets/pdfs/jswisher-manifest-settings.pdf"
+    ]
   },
   {
     "sample_id": "smp_011",
@@ -330,11 +290,7 @@
     "industries": [
       "enterprise software",
       "developer platform"
-    ],
-    "archive_url": "https://web.archive.org/web/20250523233150/https://resources.here.io/docs/core/develop/manifests/",
-    "image_path": "",
-    "live_url": "https://resources.here.io/docs/core/develop/manifests/",
-    "pdf_path": "assets/pdfs/jswisher-manifest-settings.pdf"
+    ]
   },
   {
     "sample_id": "smp_012",
@@ -359,11 +315,7 @@
     "industries": [
       "enterprise software",
       "developer platform"
-    ],
-    "archive_url": "https://web.archive.org/web/20250523233150/https://resources.here.io/docs/core/develop/manifests/fallback-manifests",
-    "image_path": "",
-    "live_url": "https://resources.here.io/docs/core/develop/manifests/fallback-manifests",
-    "pdf_path": "assets/pdfs/jswisher-fallback-manifests.pdf"
+    ]
   },
   {
     "sample_id": "smp_013",
@@ -388,11 +340,7 @@
     "industries": [
       "enterprise software",
       "developer platform"
-    ],
-    "archive_url": "https://web.archive.org/web/20250523233150/https://resources.here.io/docs/core/develop/manifests/fallback-manifests",
-    "image_path": "",
-    "live_url": "https://resources.here.io/docs/core/develop/manifests/fallback-manifests",
-    "pdf_path": "assets/pdfs/jswisher-fallback-manifests.pdf"
+    ]
   },
   {
     "sample_id": "smp_014",
@@ -418,11 +366,7 @@
     "industries": [
       "enterprise software",
       "developer platform"
-    ],
-    "archive_url": "https://web.archive.org/web/20250523233150/https://resources.here.io/docs/core/develop/manifests/fallback-manifests",
-    "image_path": "",
-    "live_url": "https://resources.here.io/docs/core/develop/manifests/fallback-manifests",
-    "pdf_path": "assets/pdfs/jswisher-fallback-manifests.pdf"
+    ]
   },
   {
     "sample_id": "smp_015",
@@ -449,11 +393,7 @@
     "industries": [
       "enterprise software",
       "developer platform"
-    ],
-    "archive_url": "https://web.archive.org/web/20250907141340/https://resources.here.io/docs/core/manage/security/api-security-desktop-owners/",
-    "image_path": "",
-    "live_url": "https://resources.here.io/docs/core/manage/security/api-security-desktop-owners",
-    "pdf_path": "assets/pdfs/jswisher-api-security-desktop.pdf"
+    ]
   },
   {
     "sample_id": "smp_016",
@@ -480,18 +420,16 @@
     "industries": [
       "enterprise software",
       "developer platform"
-    ],
-    "archive_url": "https://web.archive.org/web/20250907141340/https://resources.here.io/docs/core/manage/security/api-security-desktop-owners/",
-    "image_path": "",
-    "live_url": "https://resources.here.io/docs/core/manage/security/api-security-desktop-owners",
-    "pdf_path": "assets/pdfs/jswisher-api-security-desktop.pdf"
+    ]
   },
   {
   "sample_id": "smp_017",
   "document_id": "doc_008",
+  "publish": true,
   "title": "Agents: integrating external systems with HERE Enterprise Browser",
   "sample_type": "concept",
   "content_skill": "conceptual-explanation",
+  "position_fit_note": "Explanation of platform integration architecture and third-party connectivity concepts.",
   "asset_type": "web_page",
   "audience": ["platform administrators"],
   "summary": "Explains how agents connect HERE Enterprise Browser to external systems such as Microsoft 365, Salesforce, and Slack, enabling cross-application search and interoperability.",
@@ -508,19 +446,16 @@
   "industries": [
     "enterprise software", 
     "developer platform"
-    ],
-  "live_url": "https://resources.here.io/docs/guide/admins/agents",
-  "archive_url": "https://web.archive.org/web/20251009080836/https://resources.here.io/docs/guide/admins/agents/",
-  "pdf_path": "assets/pdfs/jswisher-agent-admin-guide.pdf",
-  "fit_note": "Explanation of platform integration architecture and third-party connectivity concepts.",
-  "publish": true
+    ]
 },
 {
   "sample_id": "smp_018",
   "document_id": "doc_008",
+  "publish": true,
   "title": "Configure an agent integration in the HERE Admin Console",
   "sample_type": "procedure",
   "content_skill": "procedural-instructions",
+  "position_fit_note": "Shows step-by-step administrative procedure documentation for configuring enterprise integrations.",
   "asset_type": "web_page",
   "audience": ["platform administrators"],
   "summary": "Step-by-step instructions for creating and configuring an 'agent' (integration) in the HERE Admin Console, including selecting the agent type, entering configuration values, and granting access.",
@@ -535,11 +470,6 @@
     "enterprise integrations"
     ],
   "industries": [
-    "enterprise software"],
-  "live_url": "https://resources.here.io/docs/guide/admins/agents",
-  "archive_url": "https://web.archive.org/web/20251009080836/https://resources.here.io/docs/guide/admins/agents/",
-  "pdf_path": "assets/pdfs/jswisher-agent-admin-guide.pdf",
-  "fit_note": "Shows clear step-by-step administrative procedure documentation for configuring enterprise integrations.",
-  "publish": true
+    "enterprise software"]
 }
 ]

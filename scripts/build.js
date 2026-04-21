@@ -46,7 +46,6 @@ function assetExists(relPath) {
 /* --------------------------------- utilities --------------------------------- */
 
 function isPublished(record) {
-//  console.log(`Checking publish status for record with ID "${record.sample_id || record.position_id || 'unknown'}":`, record.publish);
   return Boolean(record.publish) !== false;
 }
 
@@ -130,11 +129,12 @@ function renderTagRow(tags) {
   return `<div class="tag-row">${tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}</div>`;
 }
 
-function renderLinks(sample) {
+function renderLinks(document) {
+  if (!document) return '';
   const links = [];
-  if (assetExists(sample.pdf_path)) links.push(renderButton(toPublishedUrl(sample.pdf_path), 'PDF', true));
-  if (sample.live_url) links.push(renderButton(toPublishedUrl(sample.live_url), 'Live page', true));
-  if (sample.archive_url) links.push(renderButton(toPublishedUrl(sample.archive_url), 'Archived page', true));
+  if (assetExists(document.pdf_path)) links.push(renderButton(toPublishedUrl(document.pdf_path), 'PDF', true));
+  if (document.doc_url) links.push(renderButton(toPublishedUrl(document.doc_url), 'Live page', true));
+  if (document.archive_url) links.push(renderButton(toPublishedUrl(document.archive_url), 'Archived page', true));
   return links.length ? `<div class="project-links">${links.join('')}</div>` : '';
 }
 
@@ -154,7 +154,7 @@ ${content}
 </html>`;
 }
 
-function renderHomePage(site, positions, samples) {
+function renderHomePage(site, positions, samples, documentMap) {
   const positionCards = positions.map(position => {
     const href = `positions/${encodeURIComponent(position.page_slug)}.html`;
     return `
@@ -166,13 +166,16 @@ function renderHomePage(site, positions, samples) {
       </article>`;
   }).join('');
 
-  const projectCards = samples.map(sample => `
+  const projectCards = samples.map(sample => {
+    const document = sample.document_id ? documentMap.get(sample.document_id) : null;
+    return `
       <article class="card">
         <h3>${escapeHtml(sample.title || 'Untitled sample')}</h3>
         <p>${escapeHtml(sample.summary || '')}</p>
         ${renderTagRow(sample.skills)}
-        ${renderLinks(sample)}
-      </article>`).join('');
+        ${renderLinks(document)}
+      </article>`;
+  }).join('');
 
   return pageShell({
     title: site.site_title || "Janet Swisher's Portfolio",
@@ -200,8 +203,9 @@ function renderHomePage(site, positions, samples) {
   });
 }
 
-function renderSelectedSampleCard(item, depth = 0) {
+function renderSelectedSampleCard(item, depth = 0, documentMap) {
   const { sample, selection } = item;
+  const document = sample.document_id ? documentMap.get(sample.document_id) : null;
 
   const title = selection.custom_label || sample.title || '';
   const fitNote = selection.custom_fit_note || sample.position_fit_note || '';
@@ -217,14 +221,14 @@ function renderSelectedSampleCard(item, depth = 0) {
           ${audience ? `<p class="audience"><strong>Audience:</strong> ${escapeHtml(audience)}</p>` : ''}
           ${fitNote ? `<p class="muted">${escapeHtml(fitNote)}</p>` : ''}
           ${renderTagRow(sample.skills)}
-          ${renderLinks(sample)}
+          ${renderLinks(document)}
         </div>
       </div>
     </article>
   `;
 }
 
-function renderPositionPage(site, position, selectedItems, depth = 1) {
+function renderPositionPage(site, position, selectedItems, depth = 1, documentMap) {
   const ctas = [];
   const fallbackEmail = site.contact_email ? `mailto:${site.contact_email}` : '';
   const ctaUrl =
@@ -261,7 +265,7 @@ function renderPositionPage(site, position, selectedItems, depth = 1) {
     groupedSectionsHtml = Array.from(groupedItems.entries())
       .map(([groupKey, items]) => {
         const cardsHtml = items
-          .map(item => renderSelectedSampleCard(item, depth))
+          .map(item => renderSelectedSampleCard(item, depth, documentMap))
           .join('');
 
         return `
@@ -303,9 +307,11 @@ function main() {
   const site = readJSON('data/site.json');
   const positions = readJSON('data/positions.json').filter(isPublished);
   const samples = readJSON('data/samples.json').filter(isPublished);
+  const documents = readJSON('data/documents.json').filter(isPublished);
   const selections = readJSON('data/selections.json').filter(isPublished);
 
   const sampleMap = new Map(samples.map(obj => [obj.sample_id, obj]));
+  const documentMap = new Map(documents.map(obj => [obj.document_id, obj]));
 
   cleanDir(outDir);
   ensureDir(path.join(outDir, 'positions'));
@@ -314,7 +320,7 @@ function main() {
 
   positions.sort((a, b) => (a.position_sequence || 999) - (b.position_sequence || 999));
 
-  fs.writeFileSync(path.join(outDir, 'index.html'), renderHomePage(site, positions, samples));
+  fs.writeFileSync(path.join(outDir, 'index.html'), renderHomePage(site, positions, samples, documentMap));
 
   for (const position of positions) {
     console.log(`Building page for position "${position.position_id}" with sequence ${position.position_sequence}...`);
@@ -329,7 +335,7 @@ function main() {
     .filter(Boolean);
     
     const outputPath = path.join(outDir, 'positions', `${position.page_slug}.html`);
-    fs.writeFileSync(outputPath, renderPositionPage(site, position, selectedItems, 1));
+    fs.writeFileSync(outputPath, renderPositionPage(site, position, selectedItems, 1, documentMap));
   }
 
   console.log(`Built ${positions.length} position page(s) into ${outDir}`);

@@ -2,7 +2,7 @@
   {
     "document_id": "doc_001",
     "title": "Log Uploader tool",
-    "public_ok": true,
+    "publish": true,
     "source_employer": "org_005",
     "source_role": "Head of Documentation",
     "notes": "",
@@ -15,7 +15,7 @@
   {
     "document_id": "doc_002",
     "title": "Subdomain takeovers",
-    "public_ok": true,
+    "publish": true,
     "source_employer": "org_004",
     "source_role": "Staff Technical Writer",
     "notes": "",
@@ -28,7 +28,7 @@
   {
     "document_id": "doc_003",
     "title": "API security",
-    "public_ok": true,
+    "publish": true,
     "source_employer": "org_005",
     "source_role": "Head of Documentation",
     "notes": "",
@@ -41,7 +41,7 @@
   {
     "document_id": "doc_004",
     "title": "Text labels and names",
-    "public_ok": true,
+    "publish": true,
     "source_employer": "org_004",
     "source_role": "Staff Technical Writer",
     "notes": "",
@@ -54,20 +54,20 @@
   {
     "document_id": "doc_005",
     "title": "Application manifest",
-    "public_ok": true,
+    "publish": true,
     "source_employer": "org_005",
     "source_role": "Head of Documentation",
     "notes": "",
     "doc_url": "https://resources.here.io/docs/core/develop/manifests/",
     "archive_url": "https://web.archive.org/web/20250523233150/https://resources.here.io/docs/core/develop/manifests/",
-    "pdf_path": "assets/pdfs/jswisher-manitest-settings.pdf",
+    "pdf_path": "assets/pdfs/jswisher-manifest-settings.pdf",
     "preview_image_path": "",
     "status": "ready"
   },
   {
     "document_id": "doc_006",
     "title": "Fallback manifests",
-    "public_ok": "",
+    "publish": true,
     "source_employer": "org_005",
     "source_role": "Head of Documentation",
     "notes": "",
@@ -80,7 +80,7 @@
   {
     "document_id": "doc_007",
     "title": "API security for desktop owners",
-    "public_ok": true,
+    "publish": true,
     "source_employer": "org_005",
     "source_role": "Head of Documentation",
     "notes": "",
@@ -93,7 +93,7 @@
   {
     "document_id": "doc_008",
     "title": "Agent administration guide",
-    "public_ok": true,
+    "publish": true,
     "source_employer": "org_005",
     "source_role": "Head of Documentation",
     "notes": "",
@@ -102,5 +102,6 @@
     "pdf_path": "assets/pdfs/jswisher-agent-admin-guide.pdf",
     "preview_image_path": "",
     "status": "ready"
-}
+  }
 ]
+

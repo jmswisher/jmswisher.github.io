@@ -71,7 +71,7 @@ Required fields:
 
 * `document_id`: string, unique identifier for the document: `doc_` + unique digits
 * `title`: string, original title of the document
-* `public_ok`: Boolean, whether this document can be shared publicly
+* `publish`: Boolean, whether this document can be shared publicly
 
 Optional fields:
 
@@ -188,10 +188,6 @@ Optional fields:
 * `summary`: string, description of the sample
 * `topics`: array of strings, topics covered by the sample
 * `industries`: array of strings, industries where this sample is applicable
-`archive_url`: string, URL of an archived version of the sample
-* `image_path`: string, path to a thumbnail image
-* `live_url`: string, URL of a live version of the sample
-* `pdf_path`: string, local path to a PDF of the sample
 
 Examples of `audience` values:
 
@@ -368,7 +364,7 @@ For each `position_id`, `priority_rank` values should be unique.
 
 * Records with `publish: false` must not be rendered on public pages.
 * A selection must not render if either the referenced sample or the selection itself has `publish: false`.
-* A sample must not render if the referenced document has `public_ok: false`.
+* A sample must not render if the referenced document has `publish: false`.
 * A document with `status: archived` may still be referenced historically, but rendering behavior should be explicit in the build logic.
 
 ## Build expectations
