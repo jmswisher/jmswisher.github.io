@@ -1,29 +1,10 @@
 [
   {
-    "selection_id": "sel_pos_org_001_senior_technical_writer_01_01",
-    "position_id": "pos_org_001_senior_technical_writer_01",
-    "sample_id": "smp_001",
-    "priority_rank": 1,
-    "publish": true,
-    "display_group": "featured",
-    "custom_label": "",
-    "custom_fit_note": ""
-  },
-  {
-    "selection_id": "sel_pos_org_001_senior_technical_writer_01_02",
-    "position_id": "pos_org_001_senior_technical_writer_01",
-    "sample_id": "smp_003",
-    "priority_rank": 2,
-    "publish": true,
-    "display_group": "featured",
-    "custom_label": "",
-    "custom_fit_note": ""
-  },
-  {
     "selection_id": "sel_pos_org_002_documentation_engineer_01_01",
     "position_id": "pos_org_002_documentation_engineer_01",
     "sample_id": "smp_002",
     "priority_rank": 1,
+    "publish": false,
     "display_group": "how_tos",
     "custom_label": "",
     "custom_fit_note": ""
@@ -44,7 +25,7 @@
     "sample_id": "smp_003",
     "priority_rank": 3,
     "publish": true,
-    "display_group": "explanatory",
+    "display_group": "conceptual",
     "custom_label": "",
     "custom_fit_note": ""
   },
@@ -53,7 +34,7 @@
     "position_id": "pos_org_002_documentation_engineer_01",
     "sample_id": "smp_008",
     "priority_rank": 4,
-    "display_group": "explanatory",
+    "display_group": "conceptual",
     "custom_label": "",
     "custom_fit_note": "I collaborated with a software engineer on this topic; sections I wrote start at \"Embedded content must be labeled.\" This topic was linked from the Firefox Developer Tools Accessibility Inspector; I was conservative about changing headings from those chosen by the engineer, as that would have required code changes to update the linked IDs."
   },
@@ -68,7 +49,7 @@
     "custom_fit_note": ""
   },
   {
-    "selection_id": "sel_pos_org_002_documentation_engineer_01_05",
+    "selection_id": "sel_pos_org_002_documentation_engineer_01_06",
     "position_id": "pos_org_002_documentation_engineer_01",
     "sample_id": "smp_014",
     "priority_rank": 6,
@@ -112,7 +93,7 @@
     "sample_id": "smp_001",
     "priority_rank": 4,
     "publish": true,
-    "display_group": "task",
+    "display_group": "procedure",
     "custom_label": "",
     "custom_fit_note": ""
   },
@@ -152,7 +133,7 @@
     "sample_id": "smp_013",
     "priority_rank": 3,
     "publish": true,
-    "display_group": "workflow explanation",
+    "display_group": "conceptual",
     "custom_label": "",
     "custom_fit_note": ""
   },
@@ -182,7 +163,7 @@
         "sample_id": "smp_018",
         "priority_rank": 1,
         "publish": true,
-        "display_group": "task",
+        "display_group": "procedure",
         "custom_label": "",
         "custom_fit_note": ""
     },
@@ -192,7 +173,7 @@
         "sample_id": "smp_001",
         "priority_rank": 2,
         "publish": true,
-        "display_group": "task",
+        "display_group": "procedure",
         "custom_label": "",
         "custom_fit_note": ""
     },
@@ -252,7 +233,7 @@
         "sample_id": "smp_017",
         "priority_rank": 4,
         "publish": true,
-        "display_group": "concept, procedure",
+        "display_group": "conceptual",
         "custom_label": "",
         "custom_fit_note": ""
     },
@@ -272,7 +253,7 @@
         "sample_id": "smp_006",
         "priority_rank": 1,
         "publish": true,
-        "display_group": "concept",
+        "display_group": "conceptual",
         "custom_label": "",
         "custom_fit_note": ""
     },
@@ -282,7 +263,7 @@
         "sample_id": "smp_017",
         "priority_rank": 2,
         "publish": true,
-        "display_group": "concept, task",
+        "display_group": "conceptual",
         "custom_label": "",
         "custom_fit_note": ""
     },
@@ -302,7 +283,7 @@
         "sample_id": "smp_005",
         "priority_rank": 4,
         "publish": true,
-        "display_group": "concept",
+        "display_group": "conceptual",
         "custom_label": "",
         "custom_fit_note": ""
     },
@@ -312,7 +293,7 @@
         "sample_id": "smp_001",
         "priority_rank": 5,
         "publish": true,
-        "display_group": "task",
+        "display_group": "procedure",
         "custom_label": "",
         "custom_fit_note": ""
     },
@@ -322,7 +303,7 @@
         "sample_id": "smp_011",
         "priority_rank": 1,
         "publish": true,
-        "display_group": "Reference",
+        "display_group": "reference",
         "custom_label": "",
         "custom_fit_note": "Structured reference documentation for a configuration-driven platform, consolidating properties spread across APIs into a single, developer-usable model. I defined the structure for the article, and updated it as properties were added or changed in the product."
     },
@@ -332,7 +313,7 @@
         "sample_id": "smp_012",
         "priority_rank": 2,
         "publish": true,
-        "display_group": "concept",
+        "display_group": "conceptual",
         "custom_label": "",
         "custom_fit_note": "Conceptual documentation explaining how fallback configuration enables application startup under failure conditions, clarifying runtime behavior for developers working with distributed systems."
     },
@@ -342,7 +323,7 @@
         "sample_id": "smp_006",
         "priority_rank": 3,
         "publish": true,
-        "display_group": "concept",
+        "display_group": "conceptual",
         "custom_label": "",
         "custom_fit_note": "Documentation of a platform-level security model governing API access, developed in collaboration with engineering to accurately represent runtime constraints and permission boundaries. Written in collaboration with the architect of the security model."
     },
