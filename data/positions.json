@@ -29,7 +29,7 @@
     "position_sequence": 2,
     "priority_sample_types": ["developer guide", "user guide", "release notes", "troubleshooting", "API guide", "reference", "configuration guide", "tutorial"],
     "priority_skills": ["procedures", "concepts", "workflow", "reference", "API documentation", "Information architecture"],
-    "resume_pdf": "assets/pdfs/Janet-Swisher-Resume-Sr-Tech-Writer-01.pdf",
+    "resume_pdf_path": "assets/pdfs/Janet-Swisher-Resume-Sr-Tech-Writer-01.pdf",
     "cta": {
         "label": "Contact Janet",
         "url": "mailto:swisher@alumni.uchicago.edu"
