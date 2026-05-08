@@ -250,14 +250,14 @@ File: `/data/selections.json`
 Required fields:
 
 * `selection_id`: string, unique identifier for the selection, typically `sel_pos_` + `organization_id` + `position.page_slug`
-* `position_id`: string, unique ID of an existing position
-* `sample_id`: string, unique ID of an existing sample selected for the position
+* `position_id`: string, an existing `position.position_id`
+* `sample_id`: string, an existing `sample.sample_id` selected for the position
 * `priority_rank` : priority of this selection among those for a given position
 * `publish` : Boolean, whether this selection can be published
 
 Optional fields:
 
-* `display_group` : string, name of a group of similar selections for display purposes
+* `display_group` : string, name of a set of similar selections for purely UI grouping purposes
 * `custom_label`: string, a label that supersedes the sample title
 * `custom_fit_note`: string, supersedes the sample's position fit note
 
