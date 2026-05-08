@@ -346,5 +346,55 @@
         "display_group": "concept",
         "custom_label": "",
         "custom_fit_note": "MDN Web Docs article explaining a complex web security vulnerability, translating DNS and infrastructure behavior into clear guidance for developers and site operators. Developed collaboratively with a Mozilla web security engineer on MDN's custom wiki platform."
-    }
+    },
+    {
+        "selection_id": "sel_pos_org_011_sr_tech_writer_02_01",
+        "position_id": "pos_org_011_sr_tech_writer_02",
+        "sample_id": "smp_011",
+        "priority_rank": 1,
+        "publish": true,
+        "display_group": "reference",
+        "custom_label": "",
+        "custom_fit_note": "Structured developer reference documentation for a configuration file that controls application capabilities and runtime behavior. This information also exists in the TypeScript API reference, but it is scattered across multiple interfaces and properties. This article consolidates that information into a single reference."
+    },
+    {
+    "selection_id": "sel_pos_org_011_sr_tech_writer_02_02",
+    "position_id": "pos_org_011_sr_tech_writer_02",
+    "sample_id": "smp_007",
+    "priority_rank": 2,
+    "publish": true,
+    "display_group": "how_tos",
+    "custom_label": "",
+    "custom_fit_note": "Developer-facing API access workflow documentation explaining how restricted platform APIs are governed and requested."
+  },
+  {
+    "selection_id": "sel_pos_org_011_sr_tech_writer_02_03",
+    "position_id": "pos_org_011_sr_tech_writer_02",
+    "sample_id": "smp_014",
+    "priority_rank": 3,
+    "publish": true,
+    "display_group": "reference",
+    "custom_label": "",
+    "custom_fit_note": "Developer documentation for runtime configuration behavior, fallback logic, emitted events, and diagnostic output."
+  },
+  {
+    "selection_id": "sel_pos_org_011_sr_tech_writer_02_04",
+    "position_id": "pos_org_011_sr_tech_writer_02",
+    "sample_id": "smp_001",
+    "priority_rank": 4,
+    "publish": true,
+    "display_group": "how_tos",
+    "custom_label": "",
+    "custom_fit_note": "Developer troubleshooting procedure for collecting diagnostic logs and supporting engineering-led debugging workflows."
+  },
+  {
+    "selection_id": "sel_pos_org_011_sr_tech_writer_02_05",
+    "position_id": "pos_org_011_sr_tech_writer_02",
+    "sample_id": "smp_003",
+    "priority_rank": 3,
+    "publish": true,
+    "display_group": "conceptual",
+    "custom_label": "",
+    "custom_fit_note": "Developer-facing security concept documentation explaining how DNS configuration and external service dependencies can create subdomain takeover vulnerabilities. This article was developed in collaboration with a security engineer, and published on MDN Web Docs."
+  }
 ]

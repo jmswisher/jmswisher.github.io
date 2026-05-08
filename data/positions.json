@@ -75,7 +75,7 @@
   {
     "position_id": "pos_org_008_founding_tech_writer_01",
     "page_slug": "founding-tech-writer-01",
-    "publish": true,
+    "publish": false,
     "position_title": "Founding Technical Writer",
     "public_label": "Founding Technical Writer Portfolio",
     "organization_id": "org_008",
@@ -111,7 +111,7 @@
   {
     "position_id": "pos_org_010_director_tw_01",
     "page_slug": "director-tech-writing-01",
-    "publish": true,
+    "publish": false,
     "position_title": "Director, Technical Writing",
     "public_label": "Director, Technical Writing Portfolio",
     "organization_id": "org_010",
@@ -125,5 +125,24 @@
       "label": "Contact Janet",
       "url": "mailto:swisher@alumni.uchicago.edu"
     }
-  }
+  },
+{
+    "position_id": "pos_org_011_sr_tech_writer_02",
+    "page_slug": "sr_tech-writer-02",
+    "publish": true,
+    "position_title": "Senior Technical Writer",
+    "public_label": "Senior Technical Writer Portfolio",
+    "organization_id": "org_011",
+    "headline": "Creates high-quality developer and API documentation that improves the developer experience.",
+    "summary": "These samples demonstrate developer and platform documentation for complex enterprise software, including API access workflows, configuration reference material, integration procedures, and security-conscious implementation support.",
+    "position_sequence": 2,
+    "priority_sample_types": ["developer guide", "troubleshooting", "API guide", "reference", "configuration guide", "tutorial"],
+    "priority_skills": ["procedures", "concepts", "workflow", "reference", "API documentation", "Information architecture"],
+    "resume_pdf_path": "assets/pdfs/Janet-Swisher-Resume-Sr-Tech-Writer-02.pdf",
+    "cta": {
+        "label": "Contact Janet",
+        "url": "mailto:swisher@alumni.uchicago.edu"
+        }
+}
+
 ]

@@ -77,7 +77,7 @@ function publicAssetHref(relPath, depth = 0) {
 function displayGroupLabel(key) {
   const labels = {
     featured: "Featured work",
-    how_tos: "Instructional Content (How-tos)",
+    how_tos: "Procedural Content (How-tos)",
     explanatory: "Explanatory Content",
     reference: "Reference Content",
   };
