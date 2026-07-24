@@ -33,7 +33,7 @@ To add a new position:
 - Keep PDFs reasonably small when possible.
 
 ## To-dos
-- Convert build.js into a GitHub Action. Currently, I run it locally and check in the updated output files into `docs`.
+- ~~Convert build.js into a GitHub Action. Currently, I run it locally and check in the updated output files into `docs`.~~
 - Create tools/checks to ensure consistency among JSON files.
 - Replace JSON with a "real" lightweight database.
 
