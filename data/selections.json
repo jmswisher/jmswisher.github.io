@@ -396,5 +396,56 @@
     "display_group": "conceptual",
     "custom_label": "",
     "custom_fit_note": "Developer-facing security concept documentation explaining how DNS configuration and external service dependencies can create subdomain takeover vulnerabilities. This article was developed in collaboration with a security engineer, and published on MDN Web Docs."
-  }
+  },
+{
+    "selection_id": "sel_pos_org_012_staff_engg_tech_writer_01_01",
+    "position_id": "pos_org_012_staff_engg_tech_writer_01",
+    "sample_id": "smp_003",
+    "priority_rank": 1,
+    "publish": true,
+    "display_group": "conceptual",
+    "custom_label": "Subdomain takeover vulnerabilities in DNS configuration",
+    "custom_fit_note": "MDN Web Docs article explaining a complex web security vulnerability, translating DNS and infrastructure behavior into clear guidance for developers and site operators. Developed collaboratively with a Mozilla web security engineer on MDN's custom wiki platform."
+  },
+{
+    "selection_id": "sel_pos_org_012_staff_engg_tech_writer_01_02",
+    "position_id": "pos_org_012_staff_engg_tech_writer_01",
+    "sample_id": "smp_006",
+    "priority_rank": 2,
+    "publish": true,
+    "display_group": "conceptual",
+    "custom_label": "Platform local security model",
+    "custom_fit_note": "Documentation of a platform-level security model governing API access, developed in collaboration with engineering to accurately represent runtime constraints and permission boundaries. Written in collaboration with the architect of the security model."
+  },
+  {
+    "selection_id": "sel_pos_org_012_staff_engg_tech_writer_01_03",
+    "position_id": "pos_org_012_staff_engg_tech_writer_01",
+    "sample_id": "smp_011",
+    "priority_rank": 3,
+    "publish": true,
+    "display_group": "reference",
+    "custom_label": "Application manifest configuration reference",
+    "custom_fit_note": "Structured developer reference documentation for a configuration file that controls application capabilities and runtime behavior. This information also exists in the TypeScript API reference, but it is scattered across multiple interfaces and properties. This article consolidates that information into a single reference."
+  },
+  {
+    "selection_id": "sel_pos_org_012_staff_engg_tech_writer_01_04",
+    "position_id": "pos_org_012_staff_engg_tech_writer_01",
+    "sample_id": "smp_001",
+    "priority_rank": 4,
+    "publish": true,
+    "display_group": "procedure",
+    "custom_label": "Collect diagnostic logs for troubleshooting",
+    "custom_fit_note": ""
+  },
+    {
+        "selection_id": "sel_pos_org_012_staff_engg_tech_writer_01_06",
+        "position_id": "pos_org_012_staff_engg_tech_writer_01",
+        "sample_id": "smp_008",
+        "priority_rank": 5,
+        "publish": true,
+        "display_group": "conceptual",
+        "custom_label": "Accessible names and labels",
+        "custom_fit_note": "I collaborated with a software engineer on this topic; sections I wrote start at \"Embedded content must be labeled.\" This topic was linked from the Firefox Developer Tools Accessibility Inspector; I was conservative about changing headings from those chosen by the engineer, as that would have required code changes to update the linked IDs."
+    }
+
 ]
