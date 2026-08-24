@@ -446,6 +446,53 @@
         "display_group": "conceptual",
         "custom_label": "Accessible names and labels",
         "custom_fit_note": "I collaborated with a software engineer on this topic; sections I wrote start at \"Embedded content must be labeled.\" This topic was linked from the Firefox Developer Tools Accessibility Inspector; I was conservative about changing headings from those chosen by the engineer, as that would have required code changes to update the linked IDs."
+    },
+    {
+        "selection_id": "sel_pos_org_013_manager_documentation_01_01",
+        "position_id": "pos_org_013_manager_documentation_01",
+        "sample_id": "smp_001",
+        "priority_rank": 1,
+        "publish": true,
+        "display_group": "procedure",
+        "custom_label": "Collect diagnostic logs for troubleshooting",
+        "custom_fit_note": "Covers the entire technical workflow for using diagnostic logs: configuring an upload endpoint, manifest configuration, installation, launching from a manifest, programmatic use, TypeScript-style option definitions, security restrictions, log encryption, and troubleshooting failure conditions."
+    },
+    {
+        "selection_id": "sel_pos_org_013_manager_documentation_01_02",
+        "position_id": "pos_org_013_manager_documentation_01",
+        "sample_id": "smp_013",
+        "priority_rank": 2,
+        "publish": true,
+        "display_group": "conceptual",
+        "custom_label": "Fallback manifest behavior during application startup",
+        "custom_fit_note": "Demonstrates explanation of runtime behavior, failure paths, and resilience mechanisms."
+    },
+    {
+        "selection_id": "sel_pos_org_013_manager_documentation_01_03",
+        "position_id": "pos_org_013_manager_documentation_01",
+        "sample_id": "smp_006",
+        "priority_rank": 3,
+        "publish": true,
+        "display_group": "conceptual",
+        "custom_label": "Platform local API security model",
+        "custom_fit_note": "Explains an API authorization/security architecture: default-deny behavior, secured API declarations, differences between Runtime versions, development exceptions, desktop-owner controls, domain-based versus context-based permissions, manifest configuration, and querying permission state programmatically."
+    },
+    {
+        "selection_id": "sel_pos_org_013_manager_documentation_01_04",
+        "position_id": "pos_org_013_manager_documentation_01",
+        "sample_id": "smp_003",
+        "priority_rank": 4,
+        "publish": true,
+        "display_group": "conceptual",
+        "custom_fit_note": "Explains the subdomain takeover vulnerability, its consequences, provisioning and deprovisioning failure modes, prevention, and remediation."
+    },
+    {
+        "selection_id": "sel_pos_org_013_manager_documentation_01_05",
+        "position_id": "pos_org_013_manager_documentation_01",
+        "sample_id": "smp_011",
+        "priority_rank": 5,
+        "publish": true,
+        "display_group": "reference",
+        "custom_fit_note": "Structured reference documentation for a configuration-driven platform, consolidating properties spread across APIs into a single, developer-usable model. I defined the structure for the article, and updated it as properties were added or changed in the product."
     }
-
 ]
