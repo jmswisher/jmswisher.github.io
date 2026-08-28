@@ -56,9 +56,8 @@
     "publish": true,
     "title": "Subdomain takeover vulnerabilities in DNS configuration",
     "asset_type": "web page",
-    "audience": ["web developers"],
+    "audience": ["web developers", "site operators"],
     "content_skill": "conceptual-explanation",
-    "position_fit_note": "Strong example of explaining a complex security concept to developers and site operators.",
     "sample_type": "concept",
     "skills": [
       "Conceptual explanation",
@@ -134,7 +133,6 @@
     "asset_type": "web page",
     "audience": ["developers"],
     "content_skill": "conceptual-explanation",
-    "position_fit_note": "Explanation of access control for platform APIs.",
     "sample_type": "concept",
     "skills": [
       "Security concepts",

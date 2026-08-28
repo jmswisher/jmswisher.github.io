@@ -135,7 +135,7 @@
     "organization_id": "org_011",
     "headline": "Creates high-quality developer and API documentation that improves the developer experience.",
     "summary": "These samples demonstrate developer and platform documentation for complex enterprise software, including API access workflows, configuration reference material, integration procedures, and security-conscious implementation support.",
-    "position_sequence": 2,
+    "position_sequence": 3,
     "priority_sample_types": ["developer guide", "troubleshooting", "API guide", "reference", "configuration guide", "tutorial"],
     "priority_skills": ["procedures", "concepts", "workflow", "reference", "API documentation", "Information architecture"],
     "resume_pdf_path": "assets/pdfs/Janet-Swisher-Resume-Sr-Tech-Writer-02.pdf",
@@ -171,10 +171,28 @@
     "organization_id": "org_013",
     "headline": "Hands-on documentation manager leading technical writers and partnering with Product and Engineering to deliver developer, API/SDK, security, and observability documentation at scale.",
     "summary": "These samples demonstrate troubleshooting, systems thinking, security concepts, developer guidance, configuration/reference design, and the ability to explain complex runtime behavior clearly.",
-    "position_sequence": 1,
+    "position_sequence": 2,
     "priority_sample_types": ["developer guide", "troubleshooting", "reference", "configuration guide", "tutorial"],
     "priority_skills": ["procedures", "concepts", "workflow", "reference", "API documentation", "Information architecture"],
     "resume_pdf_path": "assets/pdfs/Janet-Swisher-Resume-Manager-Documentation-01.pdf",
+    "cta": {
+        "label": "Contact Janet",
+        "url": "mailto:swisher@alumni.uchicago.edu"
+    }
+},
+{
+    "position_id": "pos_org_014_sr_mgr_tech_writing_01",
+    "page_slug": "sr-manager-tech-writing-01",
+    "publish": true,
+    "position_title": "Senior Manager, Technical Writing",
+    "public_label": "Senior Manager, Technical Writing Portfolio",
+    "organization_id": "org_014",
+    "headline": "Manages and develops a writing team while defining documentation strategy and delivering developer-focused content for the company's cloud, data, API, SDK, and integration products.",
+    "summary": "These samples demonstrate documentation for complex enterprise software across multiple content types and audiences. Together, they show an ability to explain technical architecture clearly, structure detailed reference material, guide developers and administrators through real-world tasks, and make security-sensitive systems understandable and usable.",
+    "position_sequence": 1,
+    "priority_sample_types": ["developer guide", "troubleshooting", "API guide", "reference", "configuration guide", "tutorial"],
+    "priority_skills": ["procedures", "concepts", "workflow", "reference", "API documentation", "Information architecture"],
+    "resume_pdf_path": "assets/pdfs/Janet-Swisher-Resume-Sr-Mgr-TW.pdf",
     "cta": {
         "label": "Contact Janet",
         "url": "mailto:swisher@alumni.uchicago.edu"
